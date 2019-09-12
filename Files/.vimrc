@@ -1,0 +1,9 @@
+syntax on
+set laststatus=2
+set number
+set relativenumber
+set cursorline
+set hlsearch
+colorscheme peachpuff
+set autoindent
+set statusline+=%F

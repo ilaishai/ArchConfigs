@@ -1,0 +1,6 @@
+#rofi.theme: /home/ilais/.config/rofi/arthurbased.rasi
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+#rofi.theme: /home/ilais/.config/rofi/colors-rofi-dark.rasi
+rofi.width: 30
+rofi.lines: 8
+rofi.show-icons: true

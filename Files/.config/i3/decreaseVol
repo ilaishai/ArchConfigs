@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for SINK in $(pacmd list-sinks | grep 'index:' | cut -b 12)
+do
+	pactl set-sink-volume $SINK -5%
+done

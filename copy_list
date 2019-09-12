@@ -1,0 +1,17 @@
+#!/bin/bash
+
+DEST=/home/ilais/Backup/Files/
+mkdir -p "/home/ilais/Backup/Files/.config/"
+
+cp -uv "/home/ilais/.Xresources" $DEST
+cp -uv "/home/ilais/.bashrc" $DEST
+cp -uv "/home/ilais/.fehbg" $DEST
+cp -uv "/home/ilais/.vimrc" $DEST
+cp -uv "/home/ilais/.bashrc" $DEST
+
+DEST=/home/ilais/Backup/Files/.config/
+
+cp -uvr "/home/ilais/.config/i3" $DEST
+cp -uvr "/home/ilais/.config/polybar" $DEST
+cp -uvr "/home/ilais/.config/rofi" $DEST
+

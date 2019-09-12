@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+# Kill polybar processes which may be active
+killall -q polybar
+
+# Wait for those processes to shutdown
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+polybar example -r &
