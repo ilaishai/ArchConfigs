@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#echo "how many";
+#read MAX; echo "________"; 
+
+#for ((i=001; i<=$MAX; ++i))
+
+cd "~/Music/Deezloader\ Music/"
+for i in {001..457}
+do
+	if $(ls | grep -q "$i");
+	then
+		:
+	else
+		echo $i;
+	fi
+done

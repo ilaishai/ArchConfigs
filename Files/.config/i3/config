@@ -180,11 +180,11 @@ exec_always --no-startup-id ~/.config/polybar/scripts/polybarstart
 #bind keys
 bindsym $mod+d exec --no-startup-id "rofi -show run"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/increaseVol
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/media/increaseVol
 
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/decreaseVol
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/media/decreaseVol
 
-bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/muteVol
+bindsym XF86AudioMute exec --no-startup-id ~/.scripts/media/muteVol
 
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
@@ -194,9 +194,8 @@ bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5
 
 
-bindsym $mod+F1 exec --no-startup-id bash $HOME/.config/i3/bluetoothToggle
+bindsym $mod+F1 exec --no-startup-id bash $HOME/.scripts/media/bluetoothToggle
 bindsym $mod+m exec --no-startup-id urxvt -hold -e "ncmpcpp"
-#bindsym $mod+g exec --no-startup-id google-chrome-stable
 bindsym $mod+g exec --no-startup-id firefox
 bindsym $mod+c exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
 bindsym $mod+n exec --no-startup-id google-keep

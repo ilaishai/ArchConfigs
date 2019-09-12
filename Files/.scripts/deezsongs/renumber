@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "how many";
+read alreadyHas;
+echo "________";
+
+for file in ~/Music/Deezloader\ Music/New\ Playlist/*.mp3
+do
+	if [ $(echo $file | cut -c 49) == 0 ];
+	then
+		let NUM=$(echo $file | cut -c 50);
+	else
+		let NUM=$(echo $file | cut -c 49,50);
+	fi
+
+	let NUM=$NUM+$alreadyHas;
+
+	mv -v "$file" "$NUM$(echo $file | cut --complement -c 1-50)";
+	#echo $NUM;
+done
