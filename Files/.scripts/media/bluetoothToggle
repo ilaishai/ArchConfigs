@@ -6,6 +6,6 @@ if bluetoothctl show | grep -q 'Powered: yes' ; then
 else
 	bluetoothctl power on
 	bluetoothctl scan on
-	bluetoothctl connect FC:A8:9A:81:47:FC
+	#bluetoothctl connect FC:A8:9A:81:47:FC
 	#bluetoothctl connect 74:5C:4B:2D:67:AC
 fi

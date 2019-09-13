@@ -9,6 +9,7 @@ cp -uv "/home/ilais/.fehbg" $DEST
 cp -uv "/home/ilais/.vimrc" $DEST
 cp -uv "/home/ilais/.bashrc" $DEST
 cp -uvr "/home/ilais/.scripts" $DEST
+cp -uvr "/home/ilais/.ncmpcpp" $DEST
 
 DEST=/home/ilais/Backup/Files/.config/
 
