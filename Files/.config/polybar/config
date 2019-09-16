@@ -413,7 +413,7 @@ ramp-foreground = ${colors.foreground-alt}
 
 [module/bluetooth]
 type = custom/script
-exec = if [ $(bluetoothctl show | grep "Powered" | cut -c 11,12,13) == "yes" ]; then echo $(bluetoothctl info | grep "Name" | cut --complement -c 1-7); else echo "Bluetooth off"; fi
+exec = ~/.scripts/polybar/module_bluetooth
 interval = 2
 tail = true
 format-underline = #4287f5

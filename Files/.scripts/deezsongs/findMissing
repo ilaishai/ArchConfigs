@@ -5,7 +5,7 @@
 
 #for ((i=001; i<=$MAX; ++i))
 
-cd "~/Music/Deezloader\ Music/"
+cd "~/Music/Deezloader\ Music/Hebrew"
 for i in {001..457}
 do
 	if $(ls | grep -q "$i");

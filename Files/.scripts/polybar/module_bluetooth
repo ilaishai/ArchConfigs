@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $(bluetoothctl show | grep "Powered" | cut -c 11,12,13) == "yes" ]; 
+then 
+	NAME=$(bluetoothctl info | grep "Name" | cut --complement -c 1-7);
+	if [ -z "$NAME" ];
+	then
+		NAME="Scanning...";
+	fi;
+	echo $NAME;
+else 
+	echo "Bluetooth off"; 
+fi

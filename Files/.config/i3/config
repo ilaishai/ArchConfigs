@@ -195,8 +195,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5
 
 
 bindsym $mod+F1 exec --no-startup-id bash $HOME/.scripts/media/bluetoothToggle
-bindsym $mod+m exec --no-startup-id urxvt -hold -e "ncmpcpp"
-bindsym $mod+g exec --no-startup-id firefox
+bindsym $mod+m exec --no-startup-id urxvt -e "ncmpcpp"
+bindsym $mod+x exec --no-startup-id firefox
 bindsym $mod+c exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
 bindsym $mod+n exec --no-startup-id google-keep
 

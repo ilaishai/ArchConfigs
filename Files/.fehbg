@@ -1,4 +1,4 @@
 #!/bin/sh
-PICPATH="/home/ilais/Pictures/wallpapers/mountain_range.jpg";
+PICPATH="/home/ilais/Pictures/wallpapers/red_mountain_green_sky.jpg";
 feh --no-fehbg --bg-fill $PICPATH;
 wal -n -i $PICPATH;
