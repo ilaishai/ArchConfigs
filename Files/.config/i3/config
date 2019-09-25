@@ -185,21 +185,21 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/media/increaseVol
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/media/decreaseVol
 
 bindsym XF86AudioMute exec --no-startup-id ~/.scripts/media/muteVol
-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 2
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 2
 
 
 bindsym $mod+F1 exec --no-startup-id bash $HOME/.scripts/media/bluetoothToggle
-bindsym $mod+m exec --no-startup-id urxvt -e "ncmpcpp"
-bindsym $mod+x exec --no-startup-id firefox
-bindsym $mod+c exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
-bindsym $mod+n exec --no-startup-id google-keep
-
+bindsym $mod+p exec --no-startup-id urxvt -e "ncmpcpp"
+bindsym $mod+i exec --no-startup-id firefox
+bindsym $mod+y exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
+bindsym $mod+o exec --no-startup-id google-keep
+bindsym $mod+u exec --no-startup-id "mailsync"; exec --no-startup-id urxvt -e "neomutt"
+bindsym $mod+t exec --no-startup-id urxvt -e "ranger"
 bindsym --release Print exec --no-startup-id escrotum 'screenshot_%Y%m%d.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots' # All screens
 
 #wallpaper + theme
@@ -210,5 +210,5 @@ exec --no-startup-id bash $HOME/.fehbg
 #gaps
 gaps inner 10
 gaps outer 10
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 hide_edge_borders both

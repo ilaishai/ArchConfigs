@@ -190,7 +190,7 @@ icon-play = paused
 icon-pause = playing
 icon-next = 
 
-label-song-maxlen =
+label-song-maxlen = 50
 label-song-ellipsis = true
 format-online-underline = #e4c6fc
 format-online = <label-song>  ||  <toggle>

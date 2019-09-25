@@ -24,6 +24,10 @@ URxvt*boldItalicFont:  xft:inconsolata:size=12:antialias=true
 !URxvt.italicFont: xft:Consolas for Powerline:pixelsize=40:italic
 !URxvt.boldItalicFont: xft:Consolas for Powerline:pixelsize=40:bold:italic
 
+!URxvt*font:  xft:asdfg:size=12:antialias=true
+!URxvt*boldFont:  xft:asdfg:size=12:antialias=true
+!URxvt*italicFont:  xft:asdfg:size=12:antialias=true
+!URxvt*boldItalicFont:  xft:asdfg:size=12:antialias=true
 
 
 URxvt*depth: 32
@@ -33,8 +37,9 @@ URxvt*loginShell: true
 Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 5000
 URxvt*termName: rxvt-unicode
-URxvt.perl-ext-common: default,matcher
-!URxvt.bidi.enabled: true
+URxvt*perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-ext: default,matcher
+URxvt.bidi.enabled: true
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
 
