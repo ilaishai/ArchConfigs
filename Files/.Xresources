@@ -43,9 +43,10 @@ URxvt.bidi.enabled: true
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
 
-URxvt*transparent: true
-URxvt*shading: 20
-
+URxvt*transparent: false
+!URxvt*shading: 30
+URxvt*tintColor: #ffffff
+!URxvt*blueradius: 100
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 

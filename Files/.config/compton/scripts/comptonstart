@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+# Kill compton processes which may be active
+killall -q compton
+
+# Wait for those processes to shutdown
+while pgrep -u $UID -x compton >/dev/null; do sleep 1; done
+
+compton &

@@ -4,6 +4,13 @@ set number
 set relativenumber
 set cursorline
 set hlsearch
-colorscheme peachpuff
 set autoindent
 set statusline+=%F
+
+call plug#begin('~/.vim/plugins_by_vimplug')
+
+Plug 'dylanaraps/wal.vim'
+
+call plug#end()
+
+colorscheme wal
