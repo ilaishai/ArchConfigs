@@ -183,6 +183,8 @@ bindsym Shift+Control+l resize grow width 5 px or 5 ppt
 exec_always --no-startup-id ~/.config/polybar/scripts/polybarstart
 
 #bind keys
+exec_always --no-startup-id ~/.scripts/bindings/touchpad
+
 bindsym $mod+d exec --no-startup-id "rofi -show run"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/media/increaseVol
@@ -201,7 +203,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 2
 bindsym $mod+F1 exec --no-startup-id bash $HOME/.scripts/media/bluetoothToggle
 bindsym $mod+p exec --no-startup-id urxvt -e "ncmpcpp"
 bindsym $mod+i exec --no-startup-id firefox
-bindsym $mod+y exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
+#bindsym $mod+y exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
+bindsym $mod+y exec --no-startup-id google-calendar
 bindsym $mod+o exec --no-startup-id google-keep
 bindsym $mod+u exec --no-startup-id "mailsync"; exec --no-startup-id urxvt -e "neomutt"
 bindsym $mod+t exec --no-startup-id urxvt -e "ranger"
@@ -213,7 +216,6 @@ bindsym --release Print exec --no-startup-id escrotum 'screenshot_%Y%m%d.png' -e
 exec --no-startup-id bash $HOME/.fehbg
 exec_always --no-startup-id ~/.config/compton/scripts/comptonstart
 
-exec_always --no-startup-id ~/.scripts/media/muteVol
 #gaps
 gaps inner 10
 gaps outer 10

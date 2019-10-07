@@ -5,7 +5,8 @@ set relativenumber
 set cursorline
 set hlsearch
 set autoindent
-set statusline+=%F
+"set statusline+=%F
+set ruler
 
 call plug#begin('~/.vim/plugins_by_vimplug')
 

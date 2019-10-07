@@ -301,8 +301,8 @@ label-volume-foreground = ${root.foreground}
 
 #label-muted = 🔇 muted
 label-muted = muted
-#label-muted-foreground = #666
-label-muted-foreground = #ffffff
+label-muted-foreground = #666
+#label-muted-foreground = #ffffff
 label-muted-underline = #ff0000
 
 bar-volume-width = 10
@@ -414,7 +414,7 @@ ramp-foreground = ${colors.foreground-alt}
 [module/bluetooth]
 type = custom/script
 exec = ~/.scripts/polybar/module_bluetooth
-interval = 2
+interval = 1
 tail = true
 format-underline = #4287f5
 format = <label>
