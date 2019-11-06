@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for file in ~/Music/Hebrew/*.mp3
+do
+	mv -v "$file" "$NUM$(echo $file | fribidi)";
+	#echo $NUM;
+done

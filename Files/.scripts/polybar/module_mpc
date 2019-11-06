@@ -1,0 +1,13 @@
+#!/bin/bash
+
+NAME=$(mpc current | cut -c 1-30 | fribidi)
+NAME+=" ||"
+
+
+if [ $(mpc | grep "\[" | cut -c 2-5) == "play" ]; 
+then 
+	echo $NAME" Playing"
+else 
+	echo $NAME" Paused"
+fi
+
