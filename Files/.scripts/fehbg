@@ -1,0 +1,5 @@
+#!/bin/sh
+PICPATH="/home/ilais/Pictures/wallpapers/color_stripes.*";
+COLORPATH="/home/ilais/Pictures/wallpapers/happy_merchant.*";
+feh --no-fehbg --bg-fill $PICPATH;
+wal -n -i $COLORPATH;

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+# Kill compton processes which may be active
+killall -q picom
+
+# Wait for those processes to shutdown
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+
+picom &

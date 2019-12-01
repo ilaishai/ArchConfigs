@@ -187,6 +187,8 @@ exec_always --no-startup-id ~/.config/polybar/scripts/polybarstart
 exec_always --no-startup-id ~/.scripts/bindings/touchpad
 
 bindsym $mod+d exec --no-startup-id "rofi -show run"
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/media/increaseVol
 
@@ -214,10 +216,12 @@ bindsym --release Print exec --no-startup-id escrotum 'screenshot_%Y%m%d.png' -e
 #wallpaper + theme
 #exec_always --no-startup-id wal --theme solarized
 ##exec--no-startup-id "feh --bg-scale ~/Pictures/wallpaper1.png"
-exec --no-startup-id bash $HOME/.fehbg
-exec_always --no-startup-id ~/.config/compton/scripts/comptonstart
+exec --no-startup-id bash $HOME/.scripts/fehbg
+exec_always --no-startup-id ~/.config/picom/scripts/picomstart
+
 
 #gaps
+exec_always --no-startup-id ~/.scripts/alternating_layouts.py
 gaps inner 10
 gaps outer 10
 for_window [class=".*"] border pixel 2

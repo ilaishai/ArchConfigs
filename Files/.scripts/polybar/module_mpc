@@ -1,8 +1,16 @@
 #!/bin/bash
 
-NAME=$(mpc current | cut -c 1-30 | fribidi)
-NAME+=" ||"
+SIZE=40
 
+FULLNAME=$(mpc current | fribidi)
+NAME=$(echo $FULLNAME | cut -c 1-$SIZE)
+
+if [ ${#FULLNAME} -gt $SIZE ];
+then
+	NAME+="..."
+fi
+
+NAME+=" ||"
 
 if [ $(mpc | grep "\[" | cut -c 2-5) == "play" ]; 
 then 
