@@ -78,7 +78,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 # toggle tiling / floating
@@ -104,7 +104,15 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "♪"
+
+
+#workspace specific settings:
+
+assign [class="spotify"] ♪
+
+
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -175,14 +183,13 @@ bindsym Shift+Control+l resize shrink width 5 px or 5 ppt
 # finds out, if available)
 
 #bar {
-#        status_command i3status	#I REMOVED
+#        status_command i3status
 #}
 
 #MY STUFF 
 
 #polybar
 exec_always --no-startup-id ~/.config/polybar/scripts/polybarstart
-
 #bind keys
 exec_always --no-startup-id ~/.scripts/bindings/touchpad
 
@@ -195,17 +202,19 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/media/increaseVol
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/media/decreaseVol
 
 bindsym XF86AudioMute exec --no-startup-id ~/.scripts/media/muteVol
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause; exec --no-startup-id polybar-msg hook mpd 1
+bindsym XF86AudioNext exec --no-startup-id playerctl next; exec --no-startup-id polybar-msg hook mpd 1
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous; exec --no-startup-id polybar-msg hook mpd 1
 
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 2
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 2
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 2; exec --no-startup-id polybar-msg hook light 1
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 2; exec --no-startup-id polybar-msg hook light 1
 
 
-bindsym $mod+F1 exec --no-startup-id bash $HOME/.scripts/media/bluetoothToggle
+bindsym $mod+F1 exec --no-startup-id bash $HOME/.scripts/media/bluetoothToggle; exec --no-startup-id polybar-msg hook bluetooth 1
 bindsym $mod+p exec --no-startup-id urxvt -e "ncmpcpp"
+bindsym $mod+Shift+p exec --no-startup-id spotify
 bindsym $mod+i exec --no-startup-id firefox
+bindsym $mod+n exec --no-startup-id brave
 #bindsym $mod+y exec --no-startup-id surf -z 2.5 https://calendar.google.com/calendar/r
 bindsym $mod+y exec --no-startup-id google-calendar
 bindsym $mod+o exec --no-startup-id google-keep
@@ -218,11 +227,11 @@ bindsym --release Print exec --no-startup-id escrotum 'screenshot_%Y%m%d.png' -e
 ##exec--no-startup-id "feh --bg-scale ~/Pictures/wallpaper1.png"
 exec --no-startup-id bash $HOME/.scripts/fehbg
 exec_always --no-startup-id ~/.config/picom/scripts/picomstart
-
+exec_always --no-startup-id "libinput-gestures-setup start"
 
 #gaps
 exec_always --no-startup-id ~/.scripts/alternating_layouts.py
 gaps inner 10
 gaps outer 10
-for_window [class=".*"] border pixel 2
-hide_edge_borders both
+for_window [class=".*"] border pixel 0
+hide_edge_borders both		# smart, both, none, vertical, horizontal

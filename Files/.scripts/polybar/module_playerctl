@@ -1,0 +1,39 @@
+#!/bin/bash
+
+SIZE=42
+
+#FULLNAME=$(playerctl metadata artist)" - "
+#FULLNAME+=$(playerctl metadata title)" "
+
+#FULLNAME="cockandball עינוי hahafunny, this is funny פלוץ"
+#FULLNAME+="you gotta be kinda funny to make this up mirite"
+
+FULLNAME=$(mpc current)
+
+NAME=$(echo "$FULLNAME" | cut -c 1-$SIZE | fribidi)
+
+if [ ${#FULLNAME} != 0 ];
+then
+
+	if [ ${#FULLNAME} -gt $SIZE ];
+	then
+		NAME+="..."
+	fi
+
+	# NAME+=" || "$(playerctl status)
+
+ 	#if [ $(playerctl status) == "Playing" ]
+	#if [ "Playing" == "Playing" ]
+	if [ $(mpc | grep "\[" | cut -c 2-5) == "play" ]; 
+ 	then
+ 		#NAME+=" | "	# alternative
+		#NAME+=" | "	# circular
+		NAME+="  |  "
+ 	else
+ 		#NAME+=" | "	# alternative
+		#NAME+=" | "	# circular
+		NAME+="  |  "
+ 	fi
+
+	echo "$NAME"
+fi

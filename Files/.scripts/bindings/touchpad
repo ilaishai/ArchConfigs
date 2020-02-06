@@ -1,2 +1,5 @@
-xinput set-prop "SynPS/2 Synaptics TouchPad" 305 1
-xinput set-prop "SynPS/2 Synaptics TouchPad" 313 1
+#xinput set-prop "SynPS/2 Synaptics TouchPad" 305 1
+#xinput set-prop "SynPS/2 Synaptics TouchPad" 313 1
+xinput set-prop 15 311 1	# touch enabled clicking
+xinput set-prop 15 319 1	# natural scrolling
+

@@ -1,6 +1,6 @@
 * {
 
-    active-background: #859900;
+    active-background: #dc322f;
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
@@ -17,10 +17,10 @@
 
     background-color: @background;
 
-    background: #073642;
+    background: #dc322f;
 
 
-    foreground: #fdf6e3;
+    foreground: #dc322f;
     border-color: @background;
     spacing: 2;
 }
@@ -74,8 +74,8 @@
 
 #element.normal.normal {
     background-color: @normal-background;
-    //text-color: @normal-foreground;
-    text-color: #ff8d73;
+    text-color: @normal-foreground;
+    //text-color: #ff8d73;
 }
 
 #element.normal.urgent {

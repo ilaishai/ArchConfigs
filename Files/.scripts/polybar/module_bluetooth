@@ -9,5 +9,5 @@ then
 	fi;
 	echo $NAME;
 else 
-	echo "Bluetooth off"; 
+	echo "OFF"; 
 fi

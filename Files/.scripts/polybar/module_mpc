@@ -2,20 +2,20 @@
 
 SIZE=40
 
-FULLNAME=$(mpc current | fribidi)
-NAME=$(echo $FULLNAME | cut -c 1-$SIZE)
+FULLNAME=$(mpc current)
+NAME=$(echo $FULLNAME | cut -c 1-$SIZE | fribidi)
 
 if [ ${#FULLNAME} -gt $SIZE ];
 then
 	NAME+="..."
 fi
 
-NAME+=" ||"
+NAME+=" | "
 
 if [ $(mpc | grep "\[" | cut -c 2-5) == "play" ]; 
 then 
-	echo $NAME" Playing"
+	echo "  "$NAME" "
 else 
-	echo $NAME" Paused"
+	echo "  "$NAME" "
 fi
 
