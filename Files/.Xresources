@@ -9,12 +9,11 @@ Xft.rgba: rgb
 rofi.font: sans-serif bold 25
 Xcursor.theme: DMZ-White
 
-
 ! urxvt
 URxvt*buffered: true
 URxvt*cursorBlink: false
 URxvt*underlineColor: yellow
-URxvt*font:  xft:inconsolata:size=12:antialias=true
+URxvt*font:  xft:inconsolata:size=12:antialias=true,xft:Font\ Awesome:pixelsize=50,xft:Font\ Awesome\ 5\ Free:pixelsize=50
 URxvt*boldFont:  xft:inconsolata:size=12:antialias=true
 URxvt*italicFont:  xft:inconsolata:size=12:antialias=true
 URxvt*boldItalicFont:  xft:inconsolata:size=12:antialias=true

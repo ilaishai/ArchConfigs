@@ -1,4 +1,4 @@
-;==========================================================
+;=========================================================
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -209,8 +209,9 @@ interval = 2
 format-prefix = " " 
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
-label = %percentage:2%%
+#label = %percentage:2%%
 format = <label>
+label = %{A1:exec urxvt -e htop -s PERCENT_CPU:}%percentage:2%%{A}%
 
 
 [module/memory]
@@ -219,7 +220,8 @@ interval = 2
 format-prefix = "  "
 #format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #4bffdc
-label = %percentage_used%%
+#label = %percentage_used%%
+label = %{A1:exec urxvt -e htop -s PERCENT_MEM:}%percentage_used%%{A}%
 
 [module/wlan]
 type = internal/network
@@ -299,7 +301,7 @@ label-volume-foreground = ${root.foreground}
 ;format-underline = #55aa55
 
 #label-muted = 🔇 muted
-label-muted = 
+label-muted = 
 label-muted-foreground = #666
 #label-muted-foreground = #ffffff
 ;label-muted-underline = #ff0000
@@ -430,10 +432,12 @@ ramp-foreground = ${colors.foreground-alt}
 [module/mpd]
 type = custom/ipc
 hook-0 = ~/.scripts/polybar/module_mpc
-hook-1 = mpc toggle
+hook-1 = mpc -q toggle
 click-left = polybar-msg hook mpd 2
-;format-underline = #e4c6fc
 initial = 1
+# format-underline = #e4c6fc
+;exec = ~/.scripts/polybar/module_mpc
+;tail=true
 
 [module/playerctl]
 type = custom/ipc
@@ -456,7 +460,8 @@ exec = ~/.scripts/polybar/module_bluetooth
 interval = 1
 tail = true
 ;format-underline = #4287f5
-format =  <label>
+;format =  <label>
+format = %{A1:exec ~/.scripts/media/bluetoothToggle:} <label>%{A}
 
 
 [module/powermenu]

@@ -2,20 +2,25 @@
 
 SIZE=40
 
-FULLNAME=$(mpc current)
-NAME=$(echo $FULLNAME | cut -c 1-$SIZE | fribidi)
+# while [ true ];
+# do
 
-if [ ${#FULLNAME} -gt $SIZE ];
-then
-	NAME+="..."
-fi
+	FULLNAME=$(mpc current)
+	NAME=$(echo $FULLNAME | cut -c 1-$SIZE | fribidi)
 
-NAME+=" | "
+	if [ ${#FULLNAME} -gt $SIZE ];
+	then
+		NAME+="..."
+	fi
 
-if [ $(mpc | grep "\[" | cut -c 2-5) == "play" ]; 
-then 
-	echo "  "$NAME" "
-else 
-	echo "  "$NAME" "
-fi
+	NAME+=" | "
 
+	if [ $(mpc | grep "\[p" | cut -c 2-5) == "play" ]; 
+	then 
+		echo "  "$NAME" "
+	else 
+		echo "  "$NAME" "
+	fi
+
+	# mpc idle player;
+# done

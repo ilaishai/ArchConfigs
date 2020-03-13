@@ -221,7 +221,6 @@ bindsym $mod+o exec --no-startup-id google-keep
 bindsym $mod+u exec --no-startup-id "mailsync"; exec --no-startup-id urxvt -e "neomutt"
 bindsym $mod+t exec --no-startup-id urxvt -e "ranger"
 bindsym --release Print exec --no-startup-id escrotum 'screenshot_%Y%m%d.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots' # All screens
-
 #wallpaper + theme
 #exec_always --no-startup-id wal --theme solarized
 ##exec--no-startup-id "feh --bg-scale ~/Pictures/wallpaper1.png"
