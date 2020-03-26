@@ -1,0 +1,122 @@
+
+
+# ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ ██████╗  ██████╗
+# ██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗██╔══██╗██╔════╝
+# ███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║██████╔╝██║     
+# ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║██╔══██╗██║     
+# ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝██║  ██║╚██████╗
+# ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
+                                                        
+
+###-WM-BINDINGS-###
+
+super + Return
+	urxvt
+
+super + shift + r
+	bspc wm -r
+
+super + q
+	i3-msg kill; bspc node -c
+
+super + {_, shift +}{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east};\
+	i3-msg {focus,move} {left,down,up,right}
+
+super + alt + {h,j,k,l}
+	bspc node -v {-20 0,0 20,0 -20,20 0};\
+	i3-msg move {left,down,up,right}
+
+super + {b,v}
+	i3-msg split {h,v}
+
+super + {f,shift + space}
+	bspc node -t ~{fullscreen,floating}; \
+	i3-msg {fullscreen,floating} toggle
+
+super + e
+	i3-msg layout toggle split
+
+super + {1-9}
+	bspc desktop -f {1-9}; \
+	i3-msg workspace {1-9, 10}
+	
+super + shift + {1-9}
+	bspc node -d {1-9}; \
+	i3-msg move container to workspace {1-9, 10}
+
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east} 
+
+control + shift + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+super + {Up,Down}
+	bspc config -d focused window_gap "$(($(bspc config -d focused window_gap) {-,+}5))"
+
+###-MEDIA KEYS-###
+
+XF86AudioRaiseVolume 
+	~/.scripts/media/increaseVol
+
+XF86AudioLowerVolume
+	~/.scripts/media/decreaseVol
+
+XF86AudioMute
+	~/.scripts/media/muteVol
+
+XF86AudioPlay 
+	playerctl play-pause; exec --no-startup-id polybar-msg hook mpd 1                                                    
+XF86AudioNext
+	playerctl next; exec --no-startup-id polybar-msg hook mpd 1
+
+XF86AudioPrev
+	playerctl previous; exec --no-startup-id polybar-msg hook mpd 1
+
+XF86MonBrightnessUp
+	sudo light -A 2; exec --no-startup-id polybar-msg hook light 1
+
+XF86MonBrightnessDown
+	sudo light -U 2; exec --no-startup-id polybar-msg hook light 1
+
+
+
+
+###-APP-SHORTCUTS-###
+
+
+super + d
+	rofi -show run
+
+
+super + F1
+	~/.scripts/media/bluetoothToggle; \
+	polybar-msg hook bluetooth 1
+
+super + p 
+	urxvt -e "ncmpcpp"
+
+super + shift + p 
+	spotify
+
+super + i 
+	firefox
+
+super + n 
+	brave
+
+super + y 
+	google-calendar
+
+super + o 
+	google-keep
+
+super + t 
+	urxvt -e "ranger"
+
+Print 
+	escrotum 'screenshot_%Y%m%d.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots' # All screens
+
+
+
+

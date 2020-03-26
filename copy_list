@@ -8,11 +8,12 @@ cp -uv "/home/ilais/.bashrc" $DEST
 cp -uv "/home/ilais/.vimrc" $DEST
 cp -uv "/home/ilais/.bashrc" $DEST
 cp -uvr "/home/ilais/.scripts" $DEST
-cp -uvr "/home/ilais/.ncmpcpp" $DEST
 
 DEST=/home/ilais/Backup/Files/.config/
 
 cp -uvr "/home/ilais/.config/i3" $DEST
+cp -uvr "/home/ilais/.config/bspwm" $DEST
 cp -uvr "/home/ilais/.config/polybar" $DEST
 cp -uvr "/home/ilais/.config/rofi" $DEST
 cp -uvr "/home/ilais/.config/picom" $DEST
+cp -uvr "/home/ilais/.config/sxhkd" $DEST

@@ -10,8 +10,8 @@ PS1='[\u@\h \W]\$ '
 
 #MINE
 
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS=@im=ibus
+#export QT_IM_MODULE=ibus
 
 setxkbmap -option grp:alt_shift_toggle us,il

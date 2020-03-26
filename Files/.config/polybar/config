@@ -24,7 +24,7 @@ background-alt = ${xrdb:color0}
 background-tab = ${xrdb:color0}
 foreground-alt = ${xrdb:color7}
 primary = ${xrdb:color1}
-secondary = ${xrdb:color2}
+secondary = ${xrdb:color3}
 alert = ${xrdb:color3}
 
 # :#222 ALL
@@ -74,7 +74,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=17;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=17;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=17;1"
 
-modules-left = i3 cpu memory temperature battery
+modules-left = i3 bspwm cpu memory battery xwindow
 modules-center = mpd
 modules-right = backlight pulseaudio bluetooth xkeyboard wlan eth date
 
@@ -82,10 +82,10 @@ tray-position = right
 tray-padding = 2
 tray-background = #000000
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 enable-ipc = true
-;override-redirect = true
+override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -98,7 +98,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label =  %title:0:30:...%
 
 [module/xkeyboard]
 type =internal/xkeyboard
@@ -114,6 +114,8 @@ label-layout = %name%
 
 label-indicator-padding = 10
 label-indicator-margin = 1
+;label-indicator-background = ${colors.secondary}
+label-indicator-foreground = ${colors.background}
 label-indicator-background = ${colors.secondary}
 ;label-indicator-underline = ${colors.secondary}
 
@@ -130,24 +132,36 @@ label-indicator-background = ${colors.secondary}
 [module/bspwm]
 type = internal/bspwm
 
+ws-icon-0 = 1;
+ws-icon-1 = 5;
+ws-icon-2 = 2;
+ws-icon-3 = 3;
+ws-icon-4 = 4;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.secondary}
 label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %index%
+label-empty =
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+
+
 ; Separator in between workspaces
-; label-separator = |
+;label-separator = 
 
 [module/i3]
 type = internal/i3
@@ -169,7 +183,7 @@ label-focused = %name%
 #label-focused-background = ${colors.background-alt}
 ;label-focused-background = ${colors.primary}
 ;label-focused-background = ${colors.yellow}
-label-focused-background = #FFCB6B
+label-focused-background = ${colors.secondary} 
 ;label-focused-underline= ${colors.secondary}
 label-focused-foreground= ${colors.background-alt}
 label-focused-padding = 2
@@ -439,11 +453,11 @@ initial = 1
 ;exec = ~/.scripts/polybar/module_mpc
 ;tail=true
 
-[module/playerctl]
-type = custom/ipc
-hook-0 = bash ~/.scripts/polybar/module_playerctl
-;format-underline = #e4c6fc
-initial = 1;
+#[module/playerctl]
+#type = custom/ipc
+#hook-0 = bash ~/.scripts/polybar/module_playerctl
+#;format-underline = #e4c6fc
+#initial = 1;
 
 
 #[module/light]
@@ -506,8 +520,9 @@ label-focused-background = ${colors.background-alt}
 format-padding    = 0
 ;format-underline = #ffffff
 
-label=%percentage%%
+;label=%percentage%%
 
+label = %{A1:sudo light -S 100:}%percentage%%{A}%
 
 [settings]
 screenchange-reload = true

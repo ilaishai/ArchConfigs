@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗  ██████╗
+# ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗██╔════╝
+# ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝██║     
+# ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗██║     
+# ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██║  ██║╚██████╗
+# ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+
+
+killall polybar
+~/.config/polybar/scripts/polybarstart &
+xrdb -merge ~/.Xresources
+killall sxhkd
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
+~/.scripts/bindings/touchpad &
+
+~/.scripts/fehbg &
+~/.config/picom/scripts/picomstart
+libinput-gestures-setup start
+
+##bspwm configuration
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+
+bspc config focus_follows_pointer 	true
+bspc config border_width		4
+bspc config window_gap			20
+

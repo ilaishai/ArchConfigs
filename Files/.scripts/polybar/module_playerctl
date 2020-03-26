@@ -2,13 +2,10 @@
 
 SIZE=42
 
-#FULLNAME=$(playerctl metadata artist)" - "
-#FULLNAME+=$(playerctl metadata title)" "
+FULLNAME=$(playerctl metadata artist)" - "
+FULLNAME+=$(playerctl metadata title)" "
 
-#FULLNAME="cockandball עינוי hahafunny, this is funny פלוץ"
-#FULLNAME+="you gotta be kinda funny to make this up mirite"
-
-FULLNAME=$(mpc current)
+#FULLNAME=$(mpc current)
 
 NAME=$(echo "$FULLNAME" | cut -c 1-$SIZE | fribidi)
 
