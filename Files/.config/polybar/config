@@ -74,7 +74,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=17;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=17;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=17;1"
 
-modules-left = i3 bspwm cpu memory battery xwindow
+modules-left = i3 bspwm cpu memory temperature battery
 modules-center = mpd
 modules-right = backlight pulseaudio bluetooth xkeyboard wlan eth date
 
@@ -85,7 +85,7 @@ tray-background = #000000
 wm-restack = bspwm
 ;wm-restack = i3
 enable-ipc = true
-override-redirect = true
+;override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
