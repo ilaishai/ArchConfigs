@@ -37,12 +37,12 @@ super + {f,alt + space}
 super + e
 	i3-msg layout toggle split
 
-super + {1-9}
-	bspc desktop -f {1-9}; \
+super + {1-9,0}
+	bspc desktop -f {1-9,10}; \
 	i3-msg workspace {1-9, 10}
 	
-super + shift + {1-9}
-	bspc node -d {1-9}; \
+super + shift + {1-9,0}
+	bspc node -d {1-9,10}; \
 	i3-msg move container to workspace {1-9, 10}
 
 super + control + {h,j,k,l}
@@ -83,30 +83,31 @@ XF86MonBrightnessDown
 	sudo light -U 2; exec --no-startup-id polybar-msg hook light 1
 
 
+super + F1
+	~/.scripts/media/bluetoothToggle; \
+	polybar-msg hook bluetooth 1
+
+
+Print 
+	escrotum 'screenshot_%Y%m%d.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots' # All screens
 
 
 ###-APP-SHORTCUTS-###
 
 
 super + d
-	rofi -show run
+	rofi -modi run,combi -show drun -show-icons
 
 
-super + F1
-	~/.scripts/media/bluetoothToggle; \
-	polybar-msg hook bluetooth 1
-
-super + p 
-	urxvt -e "ncmpcpp"
-
-super + shift + p 
-	spotify
+super + {_,shift+} p 
+	bspc desktop -f 10;\
+	{urxvt -e "ncmpcpp",spotify}
 
 super + i 
 	firefox
 
-super + n 
-	brave
+super + n
+	chromium
 
 super + y 
 	google-calendar
@@ -117,8 +118,6 @@ super + o
 super + t 
 	urxvt -e "ranger"
 
-Print 
-	escrotum 'screenshot_%Y%m%d.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots' # All screens
 
 
 

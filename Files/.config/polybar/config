@@ -73,10 +73,11 @@ font-1 = unifont:fontformat=truetype:size=16:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=17;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=17;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=17;1"
+font-5 = fixed:pixelsize=27;1
 
-modules-left = i3 bspwm cpu memory temperature battery
+modules-left = bspwm cpu memory battery
 modules-center = mpd
-modules-right = backlight pulseaudio bluetooth xkeyboard wlan eth date
+modules-right = backlight pulseaudio bluetooth xkeyboard wlan date
 
 tray-position = right
 tray-padding = 2
@@ -132,32 +133,35 @@ label-indicator-background = ${colors.secondary}
 [module/bspwm]
 type = internal/bspwm
 
-ws-icon-0 = 1;
-ws-icon-1 = 5;
-ws-icon-2 = 2;
-ws-icon-3 = 3;
-ws-icon-4 = 4;
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+;ws-icon-5 = 10;
+ws-icon-5 = 10;%{T6}♬%{T-}
 ws-icon-default = 
 
-format = <label-state> <label-mode>
+format = <label-state> <label-mode> %{F#555}|%{F-}
 
 
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.secondary}
 label-focused-padding = 2
 
-label-occupied = %index%
+label-occupied = %icon%
 label-occupied-padding = 2
 
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty =
-label-empty-foreground = ${colors.foreground-alt}
+label-empty = %icon%
+label-empty-foreground = ${colors.background-alt}
 label-empty-padding = 2
 
+font-0 = fixed:pixelsize=20;1
 
 
 ; Separator in between workspaces
@@ -268,21 +272,21 @@ label-disconnected-foreground = ${colors.foreground-alt}
 #ramp-signal-4 = 
 #ramp-signal-foreground = ${colors.foreground-alt}
 
-#[module/eth]
-#type = internal/network
-#interface = net0
-#interval = 3.0
-#
-#format-connected-underline = #55aa55
-#format-connected-prefix = " "
-#format-connected-prefix-foreground = ${colors.foreground-alt}
-#label-connected = %local_ip%
-#
-#format-disconnected =
-#;format-disconnected = <label-disconnected>
-#;format-disconnected-underline = ${self.format-connected-underline}
-#;label-disconnected = %ifname% disconnected
-#;label-disconnected-foreground = ${colors.foreground-alt}
+[module/eth]
+type = internal/network
+interface = net0
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
