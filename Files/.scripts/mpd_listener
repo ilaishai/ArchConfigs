@@ -1,6 +1,7 @@
 #!/bin/bash
 while [ true ]; 
 do 
+	polybar-msg hook playerctl 1 > /dev/null;
 	polybar-msg hook mpd 1 > /dev/null;
 	mpc idle player;
 done

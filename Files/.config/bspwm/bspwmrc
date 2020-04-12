@@ -19,9 +19,11 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 ~/.config/picom/scripts/picomstart
 libinput-gestures-setup start
 
+wmname LG3D
+
 ##bspwm configuration
 
-bspc monitor -d 1 2 3 4 5 10
+bspc monitor -d 1 2 3 4 8 9 10
 
 
 bspc config focus_follows_pointer 	true

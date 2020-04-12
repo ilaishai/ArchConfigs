@@ -57,6 +57,10 @@ super + {Up,Down}
 super + {Left, Right}
 	bspc node @/ --rotate {90, -90}
 
+super + {_,shift} + Tab
+	bspc desktop -f {next,prev}.occupied
+
+
 ###-MEDIA KEYS-###
 
 XF86AudioRaiseVolume 
@@ -69,18 +73,19 @@ XF86AudioMute
 	~/.scripts/media/muteVol
 
 XF86AudioPlay 
-	playerctl play-pause; exec --no-startup-id polybar-msg hook mpd 1                                                    
+	playerctl play-pause; polybar-msg hook mpd 1; polybar-msg hook playerctl 1
+
 XF86AudioNext
-	playerctl next; exec --no-startup-id polybar-msg hook mpd 1
+	playerctl next;  polybar-msg hook mpd 1; polybar-msg hook playerctl 1
 
 XF86AudioPrev
-	playerctl previous; exec --no-startup-id polybar-msg hook mpd 1
+	playerctl previous; polybar-msg hook mpd 1; polybar-msg hook playerctl 1
 
 XF86MonBrightnessUp
-	sudo light -A 2; exec --no-startup-id polybar-msg hook light 1
+	sudo light -A 2; polybar-msg hook light 1
 
 XF86MonBrightnessDown
-	sudo light -U 2; exec --no-startup-id polybar-msg hook light 1
+	sudo light -U 2; polybar-msg hook light 1
 
 
 super + F1
@@ -103,22 +108,29 @@ super + {_,shift+} p
 	bspc desktop -f 10;\
 	{urxvt -e "ncmpcpp",spotify}
 
-super + i 
+super + n
+	bspc desktop -f 9;\
 	firefox
 
-super + n
+super + i
+	bspc desktop -f 9;\
 	chromium
 
 super + y 
+	bspc desktop -f 8;\
 	google-calendar
 
 super + o 
+	bspc desktop -f 8;\
 	google-keep
 
 super + t 
+	bspc desktop -f 8;\
 	urxvt -e "ranger"
 
-
+super + u:
+	bspc desktop -f 8;\
+	chromium https://drive.google.com/drive/u/0/my-drive
 
 
 

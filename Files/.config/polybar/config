@@ -73,10 +73,12 @@ font-1 = unifont:fontformat=truetype:size=16:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=17;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=17;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=17;1"
-font-5 = fixed:pixelsize=27;1
+font-5 = fixed:pixelsize=28;1
+font-6 = "Font Awesome 5 Brands:pixelsize=23;1"
+font-7 = "Font Awesome 5 Free:style=Solid:pixelsize=23;1"
 
-modules-left = bspwm cpu memory battery
-modules-center = mpd
+modules-left = bspwm cpu memory temperature battery
+modules-center = playerctl
 modules-right = backlight pulseaudio bluetooth xkeyboard wlan date
 
 tray-position = right
@@ -139,10 +141,12 @@ ws-icon-2 = 3;3
 ws-icon-3 = 4;4
 ws-icon-4 = 5;5
 ;ws-icon-5 = 10;
-ws-icon-5 = 10;%{T6}♬%{T-}
+ws-icon-5 = 8;%{T8}%{T-}
+ws-icon-6 = 9;%{T7}%{T-}
+ws-icon-7 = 10;%{T6}♬%{T-}
 ws-icon-default = 
 
-format = <label-state> <label-mode> %{F#555}|%{F-}
+format = <label-state> <label-mode>%{F#555}|%{F-}
 
 
 label-focused = %icon%
@@ -457,11 +461,13 @@ initial = 1
 ;exec = ~/.scripts/polybar/module_mpc
 ;tail=true
 
-#[module/playerctl]
-#type = custom/ipc
-#hook-0 = bash ~/.scripts/polybar/module_playerctl
-#;format-underline = #e4c6fc
-#initial = 1;
+[module/playerctl]
+type = custom/ipc
+hook-0 = bash ~/.scripts/polybar/module_playerctl
+hook-1 = playerctl play-pause
+click-left = polybar-msg hook playerctl 2; polybar-msg hook playerctl 1
+;format-underline = #e4c6fc
+initial = 1;
 
 
 #[module/light]

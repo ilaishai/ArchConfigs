@@ -1,0 +1,714 @@
+Script started on 2020-04-07 09:41:18+03:00 [TERM="rxvt-unicode" TTY="/dev/pts/0" COLUMNS="163" LINES="47"]
+]0;ilais@PufferSpectre:~/.config/polybar[ilais@PufferSpectre polybar]$ ls[Krebootvim .xinitrc [Kcd scripts/
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ ls
+[0m[01;32mmpd[0m  [01;32mpolybarstart[0m
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ ./polybarstart 
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ polybar: error while loading shared libraries: libjsoncpp.so.21: polybarcannot open shared object file: : error while loading shared libraries: No such file or directorylibjsoncpp.so.21
+: cannot open shared object file: No such file or directory
+polybar: error while loading shared libraries: libjsoncpp.so.21: cannot open shared object file: No such file or directory
+polybar: error while loading shared libraries: libjsoncpp.so.21: cannot open shared object file: No such file or directory
+polybar-msg: No active ipc channels
+^C
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ sudo ap[K[Kpacman [K[K[K[K[K[K[K[K[K[K[K[Kpacman -Qs polybar
+local/polybar 3.4.1-1
+    A fast and easy-to-use status bar
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ sudo pacman -S polybar
+[sudo] password for ilais: 
+error: target not found: polybar
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ sudo pacman -S polybars polybar
+]0;ilais@PufferSpectre:~/.config/polybar/scripts[ilais@PufferSpectre scripts]$ yay polybar
+8 aur/polybar-spotify-git r32.50cfd6b-2 (+0 0.00%) 
+    This is a module that shows the current song playing and its primary artist on Spotify.
+7 aur/polify 2019.08.05.7-1 (+0 0.00%) 
+    polybar hookmodule manager
+6 aur/polybar-scripts-git r445.2324dcc-3 (+0 0.00%) 
+    a community project which collects scripts for polybar
+5 aur/wedder 1.0.6-1 (+2 0.13%) 
+    Current weather info for status bars like polybar
+4 aur/weather-bar 1.1-2 (+2 0.00%) 
+    Weather plug-in for polybar, lemonbar, and others. With geolocation, Weather Underground, and NOAA support
+3 aur/wedder-git 1.0.6.r0.g5842573-1 (+3 0.00%) 
+    Current weather info for status bars like polybar
+2 aur/polybar-git 3.4.0-4 (+47 1.97%) 
+    A fast and easy-to-use status bar
+1 aur/polybar 3.4.2-1 (+259 13.52%) (Installed: 3.4.1-1)
+    A fast and easy-to-use status bar
+==> Packages to install (eg: 1 2 3, 1-3 or ^4)
+==> 1
+:: Checking for conflicts...
+:: Checking for inner conflicts...
+[Repo Make: 22]  rhash-1.3.9-1  cmake-3.17.0-2  python-pytz-2019.3-3  python-babel-2.8.0-4  python-docutils-0.14-4  python-imagesize-1.2.0-1  python-markupsafe-1.1.1-3  python-jinja-2.11.1-1  python-pygments-2.6.1-2  python-urllib3-1.25.8-2  python-chardet-3.0.4-4  python-idna-2.9-1  python-requests-2.23.0-1  python-snowballstemmer-2.0.0-3  python-sphinx-alabaster-theme-0.7.12-3  python-sphinxcontrib-applehelp-1.0.2-1  python-sphinxcontrib-devhelp-1.0.2-1  python-sphinxcontrib-htmlhelp-1.0.3-1  python-sphinxcontrib-jsmath-1.0.1-4  python-sphinxcontrib-qthelp-1.0.3-1  python-sphinxcontrib-serializinghtml-1.1.4-1  python-sphinx-3.0.0-1
+[Aur: 1]  polybar-3.4.2-1
+
+==> Remove make dependencies after install? [y/N] y
+  1 polybar                                  (Installed) (Build Files Exist)
+==> Packages to cleanBuild?
+==> [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled or (1 2 3, 1-3, ^4)
+==> A
+:: Deleting (1/1): /home/ilais/.cache/yay/polybar
+:: Downloaded PKGBUILD (1/1): polybar
+  1 polybar                                  (Installed) (Build Files Exist)
+==> Diffs to show?
+==> [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled or (1 2 3, 1-3, ^4)
+==> A
+=[1mdiff --git /home/ilais/.cache/yay/polybar/PKGBUILD /home/ilais/.cache/yay/polybar/PKGBUILD[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..51dded8[m[m
+[1m--- /dev/null[m[m
+[1m+++ /home/ilais/.cache/yay/polybar/PKGBUILD[m[m
+[36m@@ -0,0 +1,34 @@[m[m
+[32m+[m[32m# Maintainer: Patrick Ziegler <p.ziegler96@gmail.com>[m[m
+[32m+[m[32mpkgname=polybar[m[m
+[32m+[m[32mpkgver=3.4.2[m[m
+[32m+[m[32mpkgrel=1[m[m
+[32m+[m[32mpkgdesc="A fast and easy-to-use status bar"[m[m
+[32m+[m[32march=("i686" "x86_64")[m[m
+[32m+[m[32murl="https://github.com/polybar/polybar"[m[m
+[32m+[m[32mlicense=("MIT")[m[m
+[32m+[m[32mdepends=("cairo" "xcb-util-image" "xcb-util-wm" "xcb-util-xrm" "xcb-util-cursor"[m[m
+[32m+[m[32m         "alsa-lib" "libpulse" "libmpdclient" "libnl" "jsoncpp" "curl")[m[m
+[32m+[m[32moptdepends=("i3-wm: i3 module support"[m[m
+[32m+[m[32m            "ttf-unifont: Font used in example config"[m[m
+[32m+[m[32m            "siji-git: Font used in example config"[m[m
+[32m+[m[32m            "xorg-fonts-misc: Font used in example config")[m[m
+[32m+[m[32mmakedepends=("cmake" "git" "python" "pkg-config" "python-sphinx" "i3-wm")[m[m
+[32m+[m[32mconflicts=("polybar-git")[m[m
+[32m+[m[32minstall="${pkgname}.install"[m[m
+[32m+[m[32msource=(${url}/releases/download/${pkgver}/polybar-${pkgver}.tar)[m[m
+[32m+[m[32msha256sums=('4d22c977969a561f561fdc7a609073854d8fea8a9eec6941e12a80457edcb63a')[m[m
+[32m+[m[m
+[32m+[m[32mprepare() {[m[m
+[32m+[m[32m  mkdir -p "${pkgname}/build"[m[m
+[32m+[m[32m}[m[m
+[32m+[m[m
+[32m+[m[32mbuild() {[m[m
+[32m+[m[32m  cd "${pkgname}/build" || exit 1[m[m
+[32m+[m[32m  cmake -DCMAKE_INSTALL_PREFIX=/usr ..[m[m
+[32m+[m[32m  cmake --build .[m[m
+[32m+[m[32m}[m[m
+[32m+[m[m
+[32m+[m[32mpackage() {[m[m
+[32m+[m[32m  cmake --build "${pkgname}/build" --target install -- DESTDIR="${pkgdir}"[m[m
+[32m+[m[32m  install -Dm644 "${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"[m[m
+[32m+[m[32m}[m[m
+[1mdiff --git /home/ilais/.cache/yay/polybar/polybar.install /home/ilais/.cache/yay/polybar/polybar.install[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..25ac794[m[m
+[1m--- /dev/null[m[m
+[1m+++ /home/ilais/.cache/yay/polybar/polybar.install[m[m
+[36m@@ -0,0 +1,26 @@[m[m
+:[K[K>
+==> Proceed with install? [Y/n] y
+:: Parsing SRCINFO (1/1): polybar
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (22) cmake-3.17.0-2  python-babel-2.8.0-4  python-chardet-3.0.4-4  python-docutils-0.14-4  python-idna-2.9-1  python-imagesize-1.2.0-1
+              python-jinja-2.11.1-1  python-markupsafe-1.1.1-3  python-pygments-2.6.1-2  python-pytz-2019.3-3  python-requests-2.23.0-1
+              python-snowballstemmer-2.0.0-3  python-sphinx-3.0.0-1  python-sphinx-alabaster-theme-0.7.12-3  python-sphinxcontrib-applehelp-1.0.2-1
+              python-sphinxcontrib-devhelp-1.0.2-1  python-sphinxcontrib-htmlhelp-1.0.3-1  python-sphinxcontrib-jsmath-1.0.1-4
+              python-sphinxcontrib-qthelp-1.0.3-1  python-sphinxcontrib-serializinghtml-1.1.4-1  python-urllib3-1.25.8-2  rhash-1.3.9-1
+
+Total Download Size:    18.38 MiB
+Total Installed Size:  102.16 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ rhash-1.3.9-1-x86_64                                                   0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% rhash-1.3.9-1-x86_64                                                 103.0 KiB   163 KiB/s 00:00 [######################################--------------------]  67% rhash-1.3.9-1-x86_64                                                 151.7 KiB   607 KiB/s 00:00 [##########################################################] 100%
+ cmake-3.17.0-2-x86_64                                                  0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% cmake-3.17.0-2-x86_64                                                564.7 KiB   784 KiB/s 00:08 [####------------------------------------------------------]   7% cmake-3.17.0-2-x86_64                                               1114.8 KiB  1440 KiB/s 00:04 [########--------------------------------------------------]  14% cmake-3.17.0-2-x86_64                                               1533.4 KiB  1647 KiB/s 00:03 [###########-----------------------------------------------]  20% cmake-3.17.0-2-x86_64                                                  2.1 MiB  2.00 MiB/s 00:02 [################------------------------------------------]  28% cmake-3.17.0-2-x86_64                                                  2.5 MiB  2.15 MiB/s 00:02 [###################---------------------------------------]  34% cmake-3.17.0-2-x86_64                                                  3.1 MiB  2.41 MiB/s 00:01 [########################----------------------------------]  42% cmake-3.17.0-2-x86_64                                                  3.7 MiB  2.36 MiB/s 00:01 [#############################-----------------------------]  50% cmake-3.17.0-2-x86_64                                                  4.3 MiB  2.52 MiB/s 00:01 [##################################------------------------]  59% cmake-3.17.0-2-x86_64                                                  5.0 MiB  2.80 MiB/s 00:00 [#######################################-------------------]  68% cmake-3.17.0-2-x86_64                                                  5.5 MiB  2.66 MiB/s 00:00 [###########################################---------------]  75% cmake-3.17.0-2-x86_64                                                  6.2 MiB  2.60 MiB/s 00:00 [################################################----------]  84% cmake-3.17.0-2-x86_64                                                  6.8 MiB  2.75 MiB/s 00:00 [#####################################################-----]  93% cmake-3.17.0-2-x86_64                                                  7.2 MiB  2.52 MiB/s 00:00 [#########################################################-]  99% cmake-3.17.0-2-x86_64                                                  7.3 MiB  2.59 MiB/s 00:03 [##########################################################] 100%
+ python-markupsafe-1.1.1-3-x86_64                                       0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-markupsafe-1.1.1-3-x86_64                                      22.4 KiB  0.00   B/s 00:00 [##########################################################] 100%
+ python-urllib3-1.25.8-2-any                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-urllib3-1.25.8-2-any                                          151.8 KiB   195 KiB/s 00:00 [####################################################------]  90% python-urllib3-1.25.8-2-any                                          167.9 KiB   639 KiB/s 00:00 [##########################################################] 100%
+ python-chardet-3.0.4-4-any                                             0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-chardet-3.0.4-4-any                                           150.7 KiB   925 KiB/s 00:00 [##########################################################] 100%
+ python-idna-2.9-1-any                                                  0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-idna-2.9-1-any                                                 89.5 KiB  14.6 MiB/s 00:00 [##########################################################] 100%
+ python-requests-2.23.0-1-any                                           0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-requests-2.23.0-1-any                                          91.4 KiB  8.93 MiB/s 00:00 [##########################################################] 100%
+ python-pytz-2019.3-3-any                                               0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-pytz-2019.3-3-any                                             172.9 KiB  1987 KiB/s 00:00 [##########################################################] 100%
+ python-babel-2.8.0-4-any                                               0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-babel-2.8.0-4-any                                             291.1 KiB   399 KiB/s 00:13 [##--------------------------------------------------------]   5% python-babel-2.8.0-4-any                                             588.0 KiB   722 KiB/s 00:06 [#####-----------------------------------------------------]  10% python-babel-2.8.0-4-any                                             855.3 KiB   927 KiB/s 00:05 [########--------------------------------------------------]  15% python-babel-2.8.0-4-any                                            1105.6 KiB  1035 KiB/s 00:04 [###########-----------------------------------------------]  19% python-babel-2.8.0-4-any                                            1387.0 KiB  1145 KiB/s 00:03 [#############---------------------------------------------]  24% python-babel-2.8.0-4-any                                            1655.6 KiB  1182 KiB/s 00:03 [################------------------------------------------]  29% python-babel-2.8.0-4-any                                            1966.7 KiB  1307 KiB/s 00:02 [###################---------------------------------------]  34% python-babel-2.8.0-4-any                                               2.2 MiB  1281 KiB/s 00:02 [######################------------------------------------]  39% python-babel-2.8.0-4-any                                               2.5 MiB  1370 KiB/s 00:02 [#########################---------------------------------]  44% python-babel-2.8.0-4-any                                               2.7 MiB  1327 KiB/s 00:02 [############################------------------------------]  49% python-babel-2.8.0-4-any                                               3.0 MiB  1348 KiB/s 00:01 [###############################---------------------------]  54% python-babel-2.8.0-4-any                                               3.4 MiB  1459 KiB/s 00:01 [##################################------------------------]  60% python-babel-2.8.0-4-any                                               3.6 MiB  1374 KiB/s 00:01 [#####################################---------------------]  65% python-babel-2.8.0-4-any                                               3.9 MiB  1419 KiB/s 00:01 [#########################################-----------------]  71% python-babel-2.8.0-4-any                                               4.3 MiB  1408 KiB/s 00:00 [############################################--------------]  77% python-babel-2.8.0-4-any                                               4.6 MiB  1472 KiB/s 00:00 [################################################----------]  84% python-babel-2.8.0-4-any                                               5.0 MiB  1495 KiB/s 00:00 [####################################################------]  91% python-babel-2.8.0-4-any                                               5.4 MiB  1536 KiB/s 00:00 [########################################################--]  97% python-babel-2.8.0-4-any                                               5.5 MiB  1422 KiB/s 00:04 [##########################################################] 100%
+ python-docutils-0.14-4-any                                             0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-docutils-0.14-4-any                                           327.2 KiB   442 KiB/s 00:00 [############################------------------------------]  49% python-docutils-0.14-4-any                                           611.4 KiB   733 KiB/s 00:00 [#####################################################-----]  92% python-docutils-0.14-4-any                                           663.5 KiB  1327 KiB/s 00:01 [##########################################################] 100%
+ python-imagesize-1.2.0-1-any                                           0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-imagesize-1.2.0-1-any                                           8.3 KiB  2.04 MiB/s 00:00 [##########################################################] 100%
+ python-jinja-2.11.1-1-any                                              0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-jinja-2.11.1-1-any                                            301.0 KiB   469 KiB/s 00:00 [########################################################--]  97% python-jinja-2.11.1-1-any                                            308.1 KiB  1263 KiB/s 00:00 [##########################################################] 100%
+ python-pygments-2.6.1-2-any                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-pygments-2.6.1-2-any                                          309.5 KiB   430 KiB/s 00:03 [#########-------------------------------------------------]  17% python-pygments-2.6.1-2-any                                          631.9 KiB   742 KiB/s 00:01 [###################---------------------------------------]  34% python-pygments-2.6.1-2-any                                          965.6 KiB   970 KiB/s 00:00 [##############################----------------------------]  53% python-pygments-2.6.1-2-any                                         1309.2 KiB  1153 KiB/s 00:00 [#########################################-----------------]  72% python-pygments-2.6.1-2-any                                         1599.1 KiB  1252 KiB/s 00:00 [###################################################-------]  88% python-pygments-2.6.1-2-any                                         1808.6 KiB  1402 KiB/s 00:01 [##########################################################] 100%
+ python-snowballstemmer-2.0.0-3-any                                     0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-snowballstemmer-2.0.0-3-any                                   136.7 KiB   790 KiB/s 00:00 [##########################################################] 100%
+ python-sphinx-alabaster-theme-0.7.12-3-any                             0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinx-alabaster-theme-0.7.12-3-any                            14.7 KiB  4.79 MiB/s 00:00 [##########################################################] 100%
+ python-sphinxcontrib-applehelp-1.0.2-1-any                             0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinxcontrib-applehelp-1.0.2-1-any                            29.4 KiB  0.00   B/s 00:00 [##########################################################] 100%
+ python-sphinxcontrib-devhelp-1.0.2-1-any                               0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinxcontrib-devhelp-1.0.2-1-any                              23.2 KiB  7.57 MiB/s 00:00 [##########################################################] 100%
+ python-sphinxcontrib-htmlhelp-1.0.3-1-any                              0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinxcontrib-htmlhelp-1.0.3-1-any                             30.9 KiB  10.1 MiB/s 00:00 [##########################################################] 100%
+ python-sphinxcontrib-jsmath-1.0.1-4-any                                0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinxcontrib-jsmath-1.0.1-4-any                                8.2 KiB  0.00   B/s 00:00 [##########################################################] 100%
+ python-sphinxcontrib-qthelp-1.0.3-1-any                                0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinxcontrib-qthelp-1.0.3-1-any                               27.4 KiB  6.69 MiB/s 00:00 [##########################################################] 100%
+ python-sphinxcontrib-serializinghtml-1.1.4-1-any                       0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinxcontrib-serializinghtml-1.1.4-1-any                      25.3 KiB  8.25 MiB/s 00:00 [##########################################################] 100%
+ python-sphinx-3.0.0-1-any                                              0.0   B  0.00   B/s 00:00 [----------------------------------------------------------]   0% python-sphinx-3.0.0-1-any                                            262.8 KiB   398 KiB/s 00:03 [########--------------------------------------------------]  14% python-sphinx-3.0.0-1-any                                            489.0 KiB   643 KiB/s 00:01 [###############-------------------------------------------]  27% python-sphinx-3.0.0-1-any                                            730.8 KiB   790 KiB/s 00:01 [#######################-----------------------------------]  41% python-sphinx-3.0.0-1-any                                           1016.5 KiB   980 KiB/s 00:00 [#################################-------------------------]  57% python-sphinx-3.0.0-1-any                                           1217.3 KiB   968 KiB/s 00:00 [#######################################-------------------]  68% python-sphinx-3.0.0-1-any                                           1518.5 KiB  1082 KiB/s 00:00 [#################################################---------]  85% python-sphinx-3.0.0-1-any                                           1769.4 KiB  1188 KiB/s 00:01 [##########################################################] 100%
+( 0/22) checking keys in keyring                                                                  [----------------------------------------------------------]   0%( 1/22) checking keys in keyring                                                                  [##--------------------------------------------------------]   4%( 2/22) checking keys in keyring                                                                  [#####-----------------------------------------------------]   9%( 3/22) checking keys in keyring                                                                  [#######---------------------------------------------------]  13%( 4/22) checking keys in keyring                                                                  [##########------------------------------------------------]  18%( 5/22) checking keys in keyring                                                                  [############----------------------------------------------]  22%( 6/22) checking keys in keyring                                                                  [###############-------------------------------------------]  27%( 7/22) checking keys in keyring                                                                  [#################-----------------------------------------]  31%( 8/22) checking keys in keyring                                                                  [####################--------------------------------------]  36%( 9/22) checking keys in keyring                                                                  [#######################-----------------------------------]  40%(10/22) checking keys in keyring                                                                  [##########################--------------------------------]  45%(11/22) checking keys in keyring                                                                  [#############################-----------------------------]  50%(12/22) checking keys in keyring                                                                  [###############################---------------------------]  54%(13/22) checking keys in keyring                                                                  [##################################------------------------]  59%(14/22) checking keys in keyring                                                                  [####################################----------------------]  63%(15/22) checking keys in keyring                                                                  [#######################################-------------------]  68%(16/22) checking keys in keyring                                                                  [#########################################-----------------]  72%(17/22) checking keys in keyring                                                                  [############################################--------------]  77%(18/22) checking keys in keyring                                                                  [##############################################------------]  81%(19/22) checking keys in keyring                                                                  [#################################################---------]  86%(20/22) checking keys in keyring                                                                  [####################################################------]  90%(21/22) checking keys in keyring                                                                  [#######################################################---]  95%(22/22) checking keys in keyring                                                                  [##########################################################] 100%
+( 0/22) checking package integrity                                                                [----------------------------------------------------------]   0%( 1/22) checking package integrity                                                                [----------------------------------------------------------]   0%( 2/22) checking package integrity                                                                [#######################-----------------------------------]  40%( 3/22) checking package integrity                                                                [#######################-----------------------------------]  41%( 4/22) checking package integrity                                                                [#########################################-----------------]  71%( 5/22) checking package integrity                                                                [##########################################----------------]  74%( 6/22) checking package integrity                                                                [###########################################---------------]  75%( 7/22) checking package integrity                                                                [###########################################---------------]  75%( 8/22) checking package integrity                                                                [############################################--------------]  76%( 9/22) checking package integrity                                                                [#################################################---------]  86%(10/22) checking package integrity                                                                [##################################################--------]  87%(11/22) checking package integrity                                                                [###################################################-------]  88%(12/22) checking package integrity                                                                [###################################################-------]  88%(13/22) checking package integrity                                                                [###################################################-------]  89%(14/22) checking package integrity                                                                [###################################################-------]  89%(15/22) checking package integrity                                                                [###################################################-------]  89%(16/22) checking package integrity                                                                [###################################################-------]  89%(17/22) checking package integrity                                                                [####################################################------]  90%(18/22) checking package integrity                                                                [####################################################------]  90%(19/22) checking package integrity                                                                [####################################################------]  90%(20/22) checking package integrity                                                                [####################################################------]  90%(21/22) checking package integrity                                                                [####################################################------]  90%(22/22) checking package integrity                                                                [##########################################################] 100%
+( 0/22) loading package files                                                                     [----------------------------------------------------------]   0%( 1/22) loading package files                                                                     [----------------------------------------------------------]   0%( 2/22) loading package files                                                                     [#######################-----------------------------------]  40%( 3/22) loading package files                                                                     [#######################-----------------------------------]  41%( 4/22) loading package files                                                                     [#########################################-----------------]  71%( 5/22) loading package files                                                                     [##########################################----------------]  74%( 6/22) loading package files                                                                     [###########################################---------------]  75%( 7/22) loading package files                                                                     [###########################################---------------]  75%( 8/22) loading package files                                                                     [############################################--------------]  76%( 9/22) loading package files                                                                     [#################################################---------]  86%(10/22) loading package files                                                                     [##################################################--------]  87%(11/22) loading package files                                                                     [###################################################-------]  88%(12/22) loading package files                                                                     [###################################################-------]  88%(13/22) loading package files                                                                     [###################################################-------]  89%(14/22) loading package files                                                                     [###################################################-------]  89%(15/22) loading package files                                                                     [###################################################-------]  89%(16/22) loading package files                                                                     [###################################################-------]  89%(17/22) loading package files                                                                     [####################################################------]  90%(18/22) loading package files                                                                     [####################################################------]  90%(19/22) loading package files                                                                     [####################################################------]  90%(20/22) loading package files                                                                     [####################################################------]  90%(21/22) loading package files                                                                     [####################################################------]  90%(22/22) loading package files                                                                     [##########################################################] 100%
+( 0/22) checking for file conflicts                                                               [----------------------------------------------------------]   0%( 1/22) checking for file conflicts                                                               [##--------------------------------------------------------]   4%( 2/22) checking for file conflicts                                                               [#####-----------------------------------------------------]   9%( 3/22) checking for file conflicts                                                               [#######---------------------------------------------------]  13%( 4/22) checking for file conflicts                                                               [##########------------------------------------------------]  18%( 5/22) checking for file conflicts                                                               [############----------------------------------------------]  22%( 6/22) checking for file conflicts                                                               [###############-------------------------------------------]  27%( 7/22) checking for file conflicts                                                               [#################-----------------------------------------]  31%( 8/22) checking for file conflicts                                                               [####################--------------------------------------]  36%( 9/22) checking for file conflicts                                                               [#######################-----------------------------------]  40%(10/22) checking for file conflicts                                                               [##########################--------------------------------]  45%(11/22) checking for file conflicts                                                               [#############################-----------------------------]  50%(12/22) checking for file conflicts                                                               [###############################---------------------------]  54%(13/22) checking for file conflicts                                                               [##################################------------------------]  59%(14/22) checking for file conflicts                                                               [####################################----------------------]  63%(15/22) checking for file conflicts                                                               [#######################################-------------------]  68%(16/22) checking for file conflicts                                                               [#########################################-----------------]  72%(17/22) checking for file conflicts                                                               [############################################--------------]  77%(18/22) checking for file conflicts                                                               [##############################################------------]  81%(19/22) checking for file conflicts                                                               [#################################################---------]  86%(20/22) checking for file conflicts                                                               [####################################################------]  90%(21/22) checking for file conflicts                                                               [#######################################################---]  95%(22/22) checking for file conflicts                                                               [##########################################################] 100%
+( 0/22) checking available disk space                                                             [----------------------------------------------------------]   0%( 1/22) checking available disk space                                                             [##--------------------------------------------------------]   4%( 2/22) checking available disk space                                                             [#####-----------------------------------------------------]   9%( 3/22) checking available disk space                                                             [#######---------------------------------------------------]  13%( 4/22) checking available disk space                                                             [##########------------------------------------------------]  18%( 5/22) checking available disk space                                                             [############----------------------------------------------]  22%( 6/22) checking available disk space                                                             [###############-------------------------------------------]  27%( 7/22) checking available disk space                                                             [#################-----------------------------------------]  31%( 8/22) checking available disk space                                                             [####################--------------------------------------]  36%( 9/22) checking available disk space                                                             [#######################-----------------------------------]  40%(10/22) checking available disk space                                                             [##########################--------------------------------]  45%(11/22) checking available disk space                                                             [#############################-----------------------------]  50%(12/22) checking available disk space                                                             [###############################---------------------------]  54%(13/22) checking available disk space                                                             [##################################------------------------]  59%(14/22) checking available disk space                                                             [####################################----------------------]  63%(15/22) checking available disk space                                                             [#######################################-------------------]  68%(16/22) checking available disk space                                                             [#########################################-----------------]  72%(17/22) checking available disk space                                                             [############################################--------------]  77%(18/22) checking available disk space                                                             [##############################################------------]  81%(19/22) checking available disk space                                                             [#################################################---------]  86%(20/22) checking available disk space                                                             [####################################################------]  90%(21/22) checking available disk space                                                             [#######################################################---]  95%(22/22) checking available disk space                                                             [##########################################################] 100%
+:: Processing package changes...
+( 1/22) installing rhash                                                                          [----------------------------------------------------------]   0%( 1/22) installing rhash                                                                          [##########################################################] 100%
+( 2/22) installing cmake                                                                          [----------------------------------------------------------]   0%( 2/22) installing cmake                                                                          [################################################----------]  83%( 2/22) installing cmake                                                                          [##########################################################] 100%
+Optional dependencies for cmake
+    qt5-base: cmake-gui [installed]
+( 3/22) installing python-pytz                                                                    [----------------------------------------------------------]   0%( 3/22) installing python-pytz                                                                    [##########################################################] 100%
+( 4/22) installing python-babel                                                                   [----------------------------------------------------------]   0%( 4/22) installing python-babel                                                                   [##########################################################] 100%
+( 5/22) installing python-docutils                                                                [----------------------------------------------------------]   0%( 5/22) installing python-docutils                                                                [##########################################################] 100%
+( 6/22) installing python-imagesize                                                               [----------------------------------------------------------]   0%( 6/22) installing python-imagesize                                                               [##########################################################] 100%
+( 7/22) installing python-markupsafe                                                              [----------------------------------------------------------]   0%( 7/22) installing python-markupsafe                                                              [##########################################################] 100%
+( 8/22) installing python-jinja                                                                   [----------------------------------------------------------]   0%( 8/22) installing python-jinja                                                                   [##########################################################] 100%
+Optional dependencies for python-jinja
+    python-babel: for i18n support [installed]
+( 9/22) installing python-pygments                                                                [----------------------------------------------------------]   0%( 9/22) installing python-pygments                                                                [##########################################################] 100%
+(10/22) installing python-urllib3                                                                 [----------------------------------------------------------]   0%(10/22) installing python-urllib3                                                                 [##########################################################] 100%
+Optional dependencies for python-urllib3
+    python-pysocks: SOCKS support
+    python-brotli: Brotli support
+    python-pyopenssl: security support
+(11/22) installing python-chardet                                                                 [----------------------------------------------------------]   0%(11/22) installing python-chardet                                                                 [##########################################################] 100%
+(12/22) installing python-idna                                                                    [----------------------------------------------------------]   0%(12/22) installing python-idna                                                                    [##########################################################] 100%
+(13/22) installing python-requests                                                                [----------------------------------------------------------]   0%(13/22) installing python-requests                                                                [##########################################################] 100%
+Optional dependencies for python-requests
+    python-pysocks: SOCKS proxy support
+(14/22) installing python-snowballstemmer                                                         [----------------------------------------------------------]   0%(14/22) installing python-snowballstemmer                                                         [##########################################################] 100%
+Optional dependencies for python-snowballstemmer
+    python-pystemmer: for improved performance
+(15/22) installing python-sphinx-alabaster-theme                                                  [----------------------------------------------------------]   0%(15/22) installing python-sphinx-alabaster-theme                                                  [##########################################################] 100%
+(16/22) installing python-sphinxcontrib-applehelp                                                 [----------------------------------------------------------]   0%(16/22) installing python-sphinxcontrib-applehelp                                                 [##########################################################] 100%
+(17/22) installing python-sphinxcontrib-devhelp                                                   [----------------------------------------------------------]   0%(17/22) installing python-sphinxcontrib-devhelp                                                   [##########################################################] 100%
+(18/22) installing python-sphinxcontrib-htmlhelp                                                  [----------------------------------------------------------]   0%(18/22) installing python-sphinxcontrib-htmlhelp                                                  [##########################################################] 100%
+(19/22) installing python-sphinxcontrib-jsmath                                                    [----------------------------------------------------------]   0%(19/22) installing python-sphinxcontrib-jsmath                                                    [##########################################################] 100%
+(20/22) installing python-sphinxcontrib-qthelp                                                    [----------------------------------------------------------]   0%(20/22) installing python-sphinxcontrib-qthelp                                                    [##########################################################] 100%
+(21/22) installing python-sphinxcontrib-serializinghtml                                           [----------------------------------------------------------]   0%(21/22) installing python-sphinxcontrib-serializinghtml                                           [##########################################################] 100%
+(22/22) installing python-sphinx                                                                  [----------------------------------------------------------]   0%(22/22) installing python-sphinx                                                                  [##########################################################] 100%
+Optional dependencies for python-sphinx
+    imagemagick: for ext.imgconverter [installed]
+    texlive-latexextra: for generation of PDF documentation
+:: Running post-transaction hooks...
+(1/4) Arming ConditionNeedsUpdate...
+(2/4) Updating icon theme caches...
+(3/4) Updating the desktop file MIME type cache...
+(4/4) Updating the MIME type database...
+[1m[38;5;2m==>[m(B[1m Making package: polybar 3.4.2-1 (Tue 07 Apr 2020 09:46:30 AM IDT)[m(B
+[1m[38;5;2m==>[m(B[1m Retrieving sources...[m(B
+[1m[38;5;4m  ->[m(B[1m Downloading polybar-3.4.2.tar...[m(B
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   607  100   607    0     0   1008      0 --:--:-- --:--:-- --:--:--  1008
+  0 2650k    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0 39 2650k   39 1053k    0     0   417k      0  0:00:06  0:00:02  0:00:04  920k 98 2650k   98 2616k    0     0   771k      0  0:00:03  0:00:03 --:--:-- 1301k100 2650k  100 2650k    0     0   765k      0  0:00:03  0:00:03 --:--:-- 1275k
+[1m[38;5;2m==>[m(B[1m Validating source files with sha256sums...[m(B
+    polybar-3.4.2.tar ... Passed
+cmake not satisfied, flushing install queue
+[1m[38;5;2m==>[m(B[1m Making package: polybar 3.4.2-1 (Tue 07 Apr 2020 09:46:36 AM IDT)[m(B
+[1m[38;5;2m==>[m(B[1m Checking runtime dependencies...[m(B
+[1m[38;5;2m==>[m(B[1m Checking buildtime dependencies...[m(B
+[1m[38;5;2m==>[m(B[1m Retrieving sources...[m(B
+[1m[38;5;4m  ->[m(B[1m Found polybar-3.4.2.tar[m(B
+[1m[38;5;2m==>[m(B[1m Validating source files with sha256sums...[m(B
+    polybar-3.4.2.tar ... Passed
+[1m[38;5;2m==>[m(B[1m Removing existing $srcdir/ directory...[m(B
+[1m[38;5;2m==>[m(B[1m Extracting sources...[m(B
+[1m[38;5;4m  ->[m(B[1m Extracting polybar-3.4.2.tar with bsdtar[m(B
+[1m[38;5;2m==>[m(B[1m Starting prepare()...[m(B
+[1m[38;5;2m==>[m(B[1m Sources are ready.[m(B
+[1m[38;5;2m==>[m(B[1m Making package: polybar 3.4.2-1 (Tue 07 Apr 2020 09:46:42 AM IDT)[m(B
+[1m[38;5;2m==>[m(B[1m Checking runtime dependencies...[m(B
+[1m[38;5;2m==>[m(B[1m Checking buildtime dependencies...[m(B
+[1m[38;5;3m==> WARNING:[m(B[1m Using existing $srcdir/ tree[m(B
+[1m[38;5;2m==>[m(B[1m Starting build()...[m(B
+-- Trying to enable ccache
+-- [33mCouldn't locate ccache, disabling ccache...[0m
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could not detect version with git, falling back to built-in version information.
+-- [33mNo build type specified; using Release[0m
+-- [32mUsing supported compiler GNU-9.3.0[0m
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.6.3") 
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Checking for module 'cairo-fc'
+--   Found cairo-fc, version 1.17.3
+-- Checking for module 'alsa'
+--   Found alsa, version 1.2.2
+-- Checking for module 'libcurl'
+--   Found libcurl, version 7.69.1
+-- Checking for module 'libmpdclient'
+--   Found libmpdclient, version 2.18
+-- Checking for module 'libnl-genl-3.0'
+--   Found libnl-genl-3.0, version 3.5.0
+-- Checking for module 'libpulse'
+--   Found libpulse, version 13.0
+-- Checking for module 'xcb-composite'
+--   Found xcb-composite, version 1.14
+-- Checking for module 'xcb-xkb'
+--   Found xcb-xkb, version 1.14
+-- Checking for module 'xcb-randr'
+--   Found xcb-randr, version 1.14
+-- Checking for module 'xcb-randr>=1.12'
+--   Found xcb-randr, version 1.14
+-- Checking for module 'xcb-xrm'
+--   Found xcb-xrm, version 1.3
+-- Checking for module 'xcb-cursor'
+--   Found xcb-cursor, version 0.1.3
+--  Build:
+-- [32;1m   Version: 3.4.2[0m
+-- [37;2m   Type: Release[0m
+-- [37;2m   CXX: /usr/bin/c++ -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -Wall -Wextra -Wpedantic -O3 -DNDEBUG[0m
+-- [37;2m   LD: /usr/bin/ld -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now [0m
+--  Install Paths:
+-- [32m   PREFIX:  /usr[0m
+-- [32m   BINDIR:  /usr/bin[0m
+-- [32m   DATADIR: /usr/share[0m
+-- [32m   DOCDIR:  /usr/share/doc/polybar[0m
+-- [32m   MANDIR:  /usr/share/man[0m
+--  Targets:
+-- [32;1m[X]   polybar-msg[0m
+-- [37;2m[ ]   testsuite[0m
+-- [32;1m[X]   documentation[0m
+--  Module support:
+-- [32;1m[X]   alsa (1.2.2)[0m
+-- [32;1m[X]   curl (7.69.1)[0m
+-- [32;1m[X]   i3[0m
+-- [32;1m[X]   mpd (2.18)[0m
+-- [32;1m[X]   network (libnl) (3.5.0)[0m
+-- [32;1m[X]   pulseaudio (13.0)[0m
+-- [32;1m[X]   xkeyboard (1.14)[0m
+--  X extensions:
+-- [32;1m[X]   xcb-randr (1.14)[0m
+-- [32;1m[X]   xcb-randr (monitor support) (1.14)[0m
+-- [32;1m[X]   xcb-composite (1.14)[0m
+-- [32;1m[X]   xcb-xkb (1.14)[0m
+-- [32;1m[X]   xcb-xrm (1.3)[0m
+-- [32;1m[X]   xcb-cursor (0.1.3)[0m
+--  Log options:
+-- [32;1m[X]   Trace logging[0m
+-- The C compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Checking for module 'xcb-proto'
+--   Found xcb-proto, version 1.14
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.2", minimum required is "3.5") 
+-- XCB[XCB]: Found component XCB
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_XCB)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:28 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_XCB: /usr/lib/libxcb.so  
+-- XCB[ICCCM]: Found component ICCCM
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_ICCCM)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:28 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_ICCCM: /usr/lib/libxcb-icccm.so  
+-- XCB[EWMH]: Found component EWMH
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_EWMH)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:28 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_EWMH: /usr/lib/libxcb-ewmh.so  
+-- XCB[UTIL]: Found component UTIL
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_UTIL)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:28 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_UTIL: /usr/lib/libxcb-util.so  
+-- XCB[IMAGE]: Found component IMAGE
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_IMAGE)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:28 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_IMAGE: /usr/lib/libxcb-image.so  
+-- Found XCB: /usr/lib/libxcb.so;/usr/lib/libxcb-icccm.so;/usr/lib/libxcb-ewmh.so;/usr/lib/libxcb-util.so;/usr/lib/libxcb-image.so  
+-- Searching for xcbgen with python
+-- Found xcbgen in /usr/lib/python3.8/site-packages
+-- XCB[RANDR]: Found component RANDR
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_RANDR)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:110 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_RANDR: /usr/lib/libxcb-randr.so  
+-- Found XCB: /usr/lib/libxcb.so;/usr/lib/libxcb-icccm.so;/usr/lib/libxcb-ewmh.so;/usr/lib/libxcb-util.so;/usr/lib/libxcb-image.so;/usr/lib/libxcb-randr.so  
+-- XCB[COMPOSITE]: Found component COMPOSITE
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (XCB_COMPOSITE) does not match the name of the calling package (XCB).  This
+  can lead to problems in calling code that expects `find_package` result
+  variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:130 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_COMPOSITE: /usr/lib/libxcb-composite.so  
+-- Found XCB: /usr/lib/libxcb.so;/usr/lib/libxcb-icccm.so;/usr/lib/libxcb-ewmh.so;/usr/lib/libxcb-util.so;/usr/lib/libxcb-image.so;/usr/lib/libxcb-randr.so;/usr/lib/libxcb-composite.so  
+-- XCB[XKB]: Found component XKB
+CMake Warning (dev) at /usr/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:272 (message):
+  The package name passed to `find_package_handle_standard_args` (XCB_XKB)
+  does not match the name of the calling package (XCB).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  lib/xpp/cmake/FindXCB.cmake:219 (find_package_handle_standard_args)
+  lib/xpp/cmake/FindXCB.cmake:238 (_xcb_handle_component)
+  lib/xpp/CMakeLists.txt:135 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XCB_XKB: /usr/lib/libxcb-xkb.so  
+-- Found XCB: /usr/lib/libxcb.so;/usr/lib/libxcb-icccm.so;/usr/lib/libxcb-ewmh.so;/usr/lib/libxcb-util.so;/usr/lib/libxcb-image.so;/usr/lib/libxcb-randr.so;/usr/lib/libxcb-composite.so;/usr/lib/libxcb-xkb.so  
+-- xpp: including xcb proto composite.xml
+-- xpp: including xcb proto randr.xml
+-- xpp: including xcb proto xkb.xml
+-- xpp: including xcb proto xproto.xml
+-- Checking for module 'jsoncpp>=1.7.7'
+--   Found jsoncpp, version 1.9.2
+-- [33;1mFont not found: fixed:pixelsize=10[0m
+-- Found font: unifont:fontformat=truetype
+-- Found font: siji:pixelsize=10
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ilais/.cache/yay/polybar/src/polybar/build
+make[1]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target doc_html[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  1%] [34m[1msphinx-build html: see doc/builder-html.log[0m
+WARNING: html_static_path entry '/home/ilais/.cache/yay/polybar/src/polybar/doc/_static' does not exist
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  1%] Built target doc_html
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target doc_man[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  2%] [34m[1msphinx-build man: see doc/builder-man.log[0m
+WARNING: html_static_path entry '/home/ilais/.cache/yay/polybar/src/polybar/doc/_static' does not exist
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  2%] Built target doc_man
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target doc[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  2%] Built target doc
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  3%] [34m[1mGenerating ../../../lib/xpp/include/xpp/proto/x.hpp[0m
+[  4%] [34m[1mGenerating ../../../lib/xpp/include/xpp/proto/composite.hpp[0m
+[  5%] [34m[1mGenerating ../../../lib/xpp/include/xpp/proto/randr.hpp[0m
+list: size, ['red', 'green', 'blue']
+list: size, ['red', 'green', 'blue']
+[  6%] [34m[1mGenerating ../../../lib/xpp/include/xpp/proto/xkb.hpp[0m
+[35m[1mScanning dependencies of target xpp[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  7%] [32m[1mLinking CXX static library libxpp.a[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  7%] Built target xpp
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target i3ipc++[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  8%] [32mBuilding CXX object lib/i3ipcpp/CMakeFiles/i3ipc++.dir/src/ipc.cpp.o[0m
+[  9%] [32mBuilding CXX object lib/i3ipcpp/CMakeFiles/i3ipc++.dir/src/ipc-util.cpp.o[0m
+[ 10%] [32m[1mLinking CXX static library libi3ipc++.a[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 10%] Built target i3ipc++
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target poly[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 11%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/adapters/alsa/control.cpp.o[0m
+[ 12%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/adapters/alsa/mixer.cpp.o[0m
+[ 13%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/adapters/mpd.cpp.o[0m
+[ 14%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/adapters/net.cpp.o[0m
+[ 15%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/adapters/net_nl.cpp.o[0m
+[ 16%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/adapters/pulseaudio.cpp.o[0m
+[ 17%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/cairo/utils.cpp.o[0m
+[ 18%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/bar.cpp.o[0m
+[ 19%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/builder.cpp.o[0m
+[ 20%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/command_line.cpp.o[0m
+[ 21%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/config.cpp.o[0m
+[ 22%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/controller.cpp.o[0m
+[ 23%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/ipc.cpp.o[0m
+[ 24%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/logger.cpp.o[0m
+[ 25%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/parser.cpp.o[0m
+[ 26%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/renderer.cpp.o[0m
+[ 27%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/screen.cpp.o[0m
+[ 28%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/components/taskqueue.cpp.o[0m
+[ 29%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/drawtypes/animation.cpp.o[0m
+[ 30%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/drawtypes/iconset.cpp.o[0m
+[ 31%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/drawtypes/label.cpp.o[0m
+[ 32%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/drawtypes/progressbar.cpp.o[0m
+[ 33%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/drawtypes/ramp.cpp.o[0m
+[ 34%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/events/signal_emitter.cpp.o[0m
+[ 35%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/events/signal_receiver.cpp.o[0m
+[ 36%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/alsa.cpp.o[0m
+[ 37%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/backlight.cpp.o[0m
+[ 38%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/battery.cpp.o[0m
+[ 39%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/bspwm.cpp.o[0m
+[ 40%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/counter.cpp.o[0m
+[ 41%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/cpu.cpp.o[0m
+[ 42%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/date.cpp.o[0m
+[ 43%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/fs.cpp.o[0m
+[ 44%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/github.cpp.o[0m
+[ 45%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/i3.cpp.o[0m
+[ 46%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/ipc.cpp.o[0m
+[ 47%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/memory.cpp.o[0m
+[ 48%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/menu.cpp.o[0m
+[ 50%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/meta/base.cpp.o[0m
+[ 51%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/mpd.cpp.o[0m
+[ 52%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/network.cpp.o[0m
+[ 53%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/pulseaudio.cpp.o[0m
+[ 54%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/script.cpp.o[0m
+[ 55%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/systray.cpp.o[0m
+[ 56%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/temperature.cpp.o[0m
+[ 57%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/text.cpp.o[0m
+[ 58%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/xbacklight.cpp.o[0m
+[ 59%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/xkeyboard.cpp.o[0m
+[ 60%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/xwindow.cpp.o[0m
+[ 61%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/modules/xworkspaces.cpp.o[0m
+[ 62%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/bspwm.cpp.o[0m
+[ 63%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/command.cpp.o[0m
+[ 64%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/concurrency.cpp.o[0m
+[ 65%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/env.cpp.o[0m
+[ 66%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/factory.cpp.o[0m
+[ 67%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/file.cpp.o[0m
+[ 68%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/http.cpp.o[0m
+[ 69%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/i3.cpp.o[0m
+[ 70%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/inotify.cpp.o[0m
+[ 71%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/io.cpp.o[0m
+[ 72%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/process.cpp.o[0m
+[ 73%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/socket.cpp.o[0m
+[ 74%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/string.cpp.o[0m
+[ 75%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/utils/throttle.cpp.o[0m
+[ 76%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/atoms.cpp.o[0m
+[ 77%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/background_manager.cpp.o[0m
+[ 78%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/connection.cpp.o[0m
+[ 79%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/cursor.cpp.o[0m
+[ 80%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/ewmh.cpp.o[0m
+[ 81%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/extensions/composite.cpp.o[0m
+[ 82%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/extensions/randr.cpp.o[0m
+[ 83%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/extensions/xkb.cpp.o[0m
+linux     [ 84%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/icccm.cpp.o[0m
+[ 85%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/registry.cpp.o[0m
+[ 86%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/tray_client.cpp.o[0m
+[ 87%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/tray_manager.cpp.o[0m
+[ 88%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/window.cpp.o[0m
+[ 89%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/winspec.cpp.o[0m
+[ 90%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/xembed.cpp.o[0m
+[ 91%] [32mBuilding CXX object bin/CMakeFiles/poly.dir/x11/xresources.cpp.o[0m
+[ 92%] [32m[1mLinking CXX static library libpoly.a[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 92%] Built target poly
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target polybar[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 93%] [32mBuilding CXX object bin/CMakeFiles/polybar.dir/main.cpp.o[0m
+[ 94%] [32m[1mLinking CXX executable polybar[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 94%] Built target polybar
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[35m[1mScanning dependencies of target polybar-msg[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 95%] [32mBuilding CXX object bin/CMakeFiles/polybar-msg.dir/ipc.cpp.o[0m
+[ 96%] [32mBuilding CXX object bin/CMakeFiles/polybar-msg.dir/utils/env.cpp.o[0m
+[ 97%] [32mBuilding CXX object bin/CMakeFiles/polybar-msg.dir/utils/file.cpp.o[0m
+[ 98%] [32mBuilding CXX object bin/CMakeFiles/polybar-msg.dir/utils/string.cpp.o[0m
+[100%] [32m[1mLinking CXX executable polybar-msg[0m
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[100%] Built target polybar-msg
+make[1]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[1m[38;5;2m==>[m(B[1m Entering fakeroot environment...[m(B
+[1m[38;5;2m==>[m(B[1m Starting package()...[m(B
+make[1]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  1%] [34m[1msphinx-build html: see doc/builder-html.log[0m
+WARNING: html_static_path entry '/home/ilais/.cache/yay/polybar/src/polybar/doc/_static' does not exist
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  1%] Built target doc_html
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  2%] [34m[1msphinx-build man: see doc/builder-man.log[0m
+WARNING: html_static_path entry '/home/ilais/.cache/yay/polybar/src/polybar/doc/_static' does not exist
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  2%] Built target doc_man
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  2%] Built target doc
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[  7%] Built target xpp
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 10%] Built target i3ipc++
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 92%] Built target poly
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[ 94%] Built target polybar
+make[2]: Entering directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+make[2]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[100%] Built target polybar-msg
+make[1]: Leaving directory '/home/ilais/.cache/yay/polybar/src/polybar/build'
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/config
+-- Up-to-date: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/.buildinfo
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_sources
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_sources/man
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_sources/man/polybar.1.rst.txt
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_sources/index.rst.txt
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/man
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/man/polybar.1.html
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/objects.inv
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/doctools.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/basic.css
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/documentation_options.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/jquery.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/language_data.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/custom.css
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/minus.png
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/file.png
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/underscore-1.3.1.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/pygments.css
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/jquery-3.4.1.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/underscore.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/searchtools.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/alabaster.css
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/_static/plus.png
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/index.html
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/search.html
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/genindex.html
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/doc/polybar/searchindex.js
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/man/man1/polybar.1
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/bash-completion/completions/polybar
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/zsh/site-functions/_polybar
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/share/zsh/site-functions/_polybar_msg
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/bin/polybar
+-- Installing: /home/ilais/.cache/yay/polybar/pkg/polybar/usr/bin/polybar-msg
+[1m[38;5;2m==>[m(B[1m Tidying install...[m(B
+[1m[38;5;4m  ->[m(B[1m Removing libtool files...[m(B
+[1m[38;5;4m  ->[m(B[1m Purging unwanted files...[m(B
+[1m[38;5;4m  ->[m(B[1m Removing static library files...[m(B
+[1m[38;5;4m  ->[m(B[1m Stripping unneeded symbols from binaries and libraries...[m(B
+[1m[38;5;4m  ->[m(B[1m Compressing man and info pages...[m(B
+[1m[38;5;2m==>[m(B[1m Checking for packaging issues...[m(B
+[1m[38;5;2m==>[m(B[1m Creating package "polybar"...[m(B
+[1m[38;5;4m  ->[m(B[1m Generating .PKGINFO file...[m(B
+[1m[38;5;4m  ->[m(B[1m Generating .BUILDINFO file...[m(B
+[1m[38;5;4m  ->[m(B[1m Adding install file...[m(B
+[1m[38;5;4m  ->[m(B[1m Generating .MTREE file...[m(B
+[1m[38;5;4m  ->[m(B[1m Compressing package...[m(B
+[1m[38;5;2m==>[m(B[1m Leaving fakeroot environment.[m(B
+[1m[38;5;2m==>[m(B[1m Finished making: polybar 3.4.2-1 (Tue 07 Apr 2020 09:51:15 AM IDT)[m(B
+[1m[38;5;2m==>[m(B[1m Cleaning up...[m(B
+loading packages...
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) polybar-3.4.2-1
+
+Total Installed Size:   3.53 MiB
+Net Upgrade Size:      -0.01 MiB
+
+:: Proceed with installation? [Y/n] 
+(0/1) checking keys in keyring                                                                    [----------------------------------------------------------]   0%(1/1) checking keys in keyring                                                                    [##########################################################] 100%
+(0/1) checking package integrity                                                                  [----------------------------------------------------------]   0%(1/1) checking package integrity                                                                  [##########################################################] 100%
+(0/1) loading package files                                                                       [----------------------------------------------------------]   0%(1/1) loading package files                                                                       [##########################################################] 100%
+(0/1) checking for file conflicts                                                                 [----------------------------------------------------------]   0%(1/1) checking for file conflicts                                                                 [##########################################################] 100%
+(0/1) checking available disk space                                                               [----------------------------------------------------------]   0%(1/1) checking available disk space                                                               [##########################################################] 100%
+:: Processing package changes...
+(1/1) upgrading polybar                                                                           [----------------------------------------------------------]   0%(1/1) upgrading polybar                                                                           [##########################################################] 100%
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...
+checking dependencies...
+:: ranger optionally requires python-chardet: in case of encoding detection problems
+
+Packages (22) cmake-3.17.0-2  python-babel-2.8.0-4  python-chardet-3.0.4-4  python-docutils-0.14-4  python-idna-2.9-1  python-imagesize-1.2.0-1
+              python-jinja-2.11.1-1  python-markupsafe-1.1.1-3  python-pygments-2.6.1-2  python-pytz-2019.3-3  python-requests-2.23.0-1
+              python-snowballstemmer-2.0.0-3  python-sphinx-3.0.0-1  python-sphinx-alabaster-theme-0.7.12-3  python-sphinxcontrib-applehelp-1.0.2-1
+              python-sphinxcontrib-devhelp-1.0.2-1  python-sphinxcontrib-htmlhelp-1.0.3-1  python-sphinxcontrib-jsmath-1.0.1-4
+              python-sphinxcontrib-qthelp-1.0.3-1  python-sphinxcontrib-serializinghtml-1.1.4-1  python-urllib3-1.25.8-2  rhash-1.3.9-1
+
+Total Removed Size:  102.16 MiB
+
+:: Do you want to remove these packages? [Y/n] 
+:: Processing package changes...
+( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [----------------------------------------------------------]   0%( 1/22) removing python-sphinx                                                                    [##########################################################] 100%
+( 2/22) removing python-sphinxcontrib-serializinghtml                                             [----------------------------------------------------------]   0%( 2/22) removing python-sphinxcontrib-serializinghtml                                             [----------------------------------------------------------]   0%( 2/22) removing python-sphinxcontrib-serializinghtml                                             [----------------------------------------------------------]   0%( 2/22) removing python-sphinxcontrib-serializinghtml                                             [----------------------------------------------------------]   0%( 2/22) removing python-sphinxcontrib-serializinghtml                                             [##########################################################] 100%
+( 3/22) removing python-sphinxcontrib-qthelp                                                      [----------------------------------------------------------]   0%( 3/22) removing python-sphinxcontrib-qthelp                                                      [----------------------------------------------------------]   0%( 3/22) removing python-sphinxcontrib-qthelp                                                      [----------------------------------------------------------]   0%( 3/22) removing python-sphinxcontrib-qthelp                                                      [----------------------------------------------------------]   0%( 3/22) removing python-sphinxcontrib-qthelp                                                      [##########################################################] 100%
+( 4/22) removing python-sphinxcontrib-jsmath                                                      [----------------------------------------------------------]   0%( 4/22) removing python-sphinxcontrib-jsmath                                                      [----------------------------------------------------------]   0%( 4/22) removing python-sphinxcontrib-jsmath                                                      [##########################################################] 100%
+( 5/22) removing python-sphinxcontrib-htmlhelp                                                    [----------------------------------------------------------]   0%( 5/22) removing python-sphinxcontrib-htmlhelp                                                    [----------------------------------------------------------]   0%( 5/22) removing python-sphinxcontrib-htmlhelp                                                    [----------------------------------------------------------]   0%( 5/22) removing python-sphinxcontrib-htmlhelp                                                    [----------------------------------------------------------]   0%( 5/22) removing python-sphinxcontrib-htmlhelp                                                    [##########################################################] 100%
+( 6/22) removing python-sphinxcontrib-devhelp                                                     [----------------------------------------------------------]   0%( 6/22) removing python-sphinxcontrib-devhelp                                                     [----------------------------------------------------------]   0%( 6/22) removing python-sphinxcontrib-devhelp                                                     [----------------------------------------------------------]   0%( 6/22) removing python-sphinxcontrib-devhelp                                                     [----------------------------------------------------------]   0%( 6/22) removing python-sphinxcontrib-devhelp                                                     [##########################################################] 100%
+( 7/22) removing python-sphinxcontrib-applehelp                                                   [----------------------------------------------------------]   0%( 7/22) removing python-sphinxcontrib-applehelp                                                   [----------------------------------------------------------]   0%( 7/22) removing python-sphinxcontrib-applehelp                                                   [----------------------------------------------------------]   0%( 7/22) removing python-sphinxcontrib-applehelp                                                   [----------------------------------------------------------]   0%( 7/22) removing python-sphinxcontrib-applehelp                                                   [##########################################################] 100%
+( 8/22) removing python-sphinx-alabaster-theme                                                    [----------------------------------------------------------]   0%( 8/22) removing python-sphinx-alabaster-theme                                                    [----------------------------------------------------------]   0%( 8/22) removing python-sphinx-alabaster-theme                                                    [##########################################################] 100%
+( 9/22) removing python-snowballstemmer                                                           [----------------------------------------------------------]   0%( 9/22) removing python-snowballstemmer                                                           [----------------------------------------------------------]   0%( 9/22) removing python-snowballstemmer                                                           [----------------------------------------------------------]   0%( 9/22) removing python-snowballstemmer                                                           [##########################################################] 100%
+(10/22) removing python-requests                                                                  [----------------------------------------------------------]   0%(10/22) removing python-requests                                                                  [----------------------------------------------------------]   0%(10/22) removing python-requests                                                                  [##########################################################] 100%
+(11/22) removing python-idna                                                                      [----------------------------------------------------------]   0%(11/22) removing python-idna                                                                      [----------------------------------------------------------]   0%(11/22) removing python-idna                                                                      [##########################################################] 100%
+(12/22) removing python-chardet                                                                   [----------------------------------------------------------]   0%(12/22) removing python-chardet                                                                   [----------------------------------------------------------]   0%(12/22) removing python-chardet                                                                   [----------------------------------------------------------]   0%(12/22) removing python-chardet                                                                   [##########################################################] 100%
+(13/22) removing python-urllib3                                                                   [----------------------------------------------------------]   0%(13/22) removing python-urllib3                                                                   [----------------------------------------------------------]   0%(13/22) removing python-urllib3                                                                   [##########################################################] 100%
+(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [----------------------------------------------------------]   0%(14/22) removing python-pygments                                                                  [##########################################################] 100%
+(15/22) removing python-jinja                                                                     [----------------------------------------------------------]   0%(15/22) removing python-jinja                                                                     [----------------------------------------------------------]   0%(15/22) removing python-jinja                                                                     [----------------------------------------------------------]   0%(15/22) removing python-jinja                                                                     [##########################################################] 100%
+(16/22) removing python-markupsafe                                                                [----------------------------------------------------------]   0%(16/22) removing python-markupsafe                                                                [----------------------------------------------------------]   0%(16/22) removing python-markupsafe                                                                [##########################################################] 100%
+(17/22) removing python-imagesize                                                                 [----------------------------------------------------------]   0%(17/22) removing python-imagesize                                                                 [----------------------------------------------------------]   0%(17/22) removing python-imagesize                                                                 [##########################################################] 100%
+(18/22) removing python-docutils                                                                  [----------------------------------------------------------]   0%(18/22) removing python-docutils                                                                  [----------------------------------------------------------]   0%(18/22) removing python-docutils                                                                  [----------------------------------------------------------]   0%(18/22) removing python-docutils                                                                  [----------------------------------------------------------]   0%(18/22) removing python-docutils                                                                  [----------------------------------------------------------]   0%(18/22) removing python-docutils                                                                  [----------------------------------------------------------]   0%(18/22) removing python-docutils                                                                  [##########################################################] 100%
+(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [----------------------------------------------------------]   0%(19/22) removing python-babel                                                                     [##########################################################] 100%
+(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [----------------------------------------------------------]   0%(20/22) removing python-pytz                                                                      [##########################################################] 100%
+(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                                            [----------------------------------------------------------]   0%(21/22) removing cmake                                                       

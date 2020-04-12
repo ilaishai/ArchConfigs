@@ -32,11 +32,13 @@ else
 		then
 			#NAME+=" | "	# alternative
 			#NAME+=" | "	# circular
-			echo "  ""$NAME""|  "
+			NAME+="|  "
 		else
 			#NAME+=" | "	# alternative
 			#NAME+=" | "	# circular
-			echo "  ""$NAME""|  "
+			NAME+="|  "
 		fi
+
+		echo "  ""$NAME"
 	fi
 fi

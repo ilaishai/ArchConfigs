@@ -1,6 +1,6 @@
 #!/bin/sh
 PICPATH="/home/ilais/Pictures/wallpapers/pineapple.*";
-COLORPATH="/home/ilais/Pictures/wallpapers/pineapple.*";
+COLORPATH="/home/ilais/Pictures/wallpapers/jazzp_cup.*";
 feh --no-fehbg --bg-fill $PICPATH;
-# wal -n -i $COLORPATH;
+#wal -n -i $COLORPATH;
 wal --theme base16-materialer

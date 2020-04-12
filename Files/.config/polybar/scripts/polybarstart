@@ -4,6 +4,7 @@
 # Kill polybar processes which may be active
 killall -q polybar
 killall -q mpd_listener
+killall -q playerctl_listener 
 
 # Wait for those processes to shutdown
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
@@ -13,4 +14,5 @@ polybar top -r &
 polybar bottom -r &
 polybar base -r &
 
-./.scripts/mpd_listener &
+~/.scripts/mpd_listener &
+~/.scripts/playerctl_listener &
