@@ -54,9 +54,13 @@ control + shift + {h,j,k,l}
 super + {Up,Down}
 	bspc config -d focused window_gap "$(($(bspc config -d focused window_gap) {-,+}5))"
 
+super + control + {Left, Right}
+	bspc desktop -f {prev, next}.occupied
+
 super + {Left, Right}
 	bspc node @/ --rotate {90, -90}
 
+	
 super + {_,shift} + Tab
 	bspc desktop -f {next,prev}.occupied
 
@@ -130,7 +134,7 @@ super + t
 
 super + u:
 	bspc desktop -f 8;\
-	chromium https://drive.google.com/drive/u/0/my-drive
+	chromium --new-window https://drive.google.com/drive/u/0/my-drive
 
 
 
