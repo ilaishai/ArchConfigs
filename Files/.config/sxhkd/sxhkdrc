@@ -80,7 +80,7 @@ XF86AudioPlay
 	playerctl play-pause; polybar-msg hook mpd 1; polybar-msg hook playerctl 1
 
 XF86AudioNext
-	playerctl next;  polybar-msg hook mpd 1; polybar-msg hook playerctl 1
+	playerctl next; polybar-msg hook mpd 1; polybar-msg hook playerctl 1
 
 XF86AudioPrev
 	playerctl previous; polybar-msg hook mpd 1; polybar-msg hook playerctl 1
@@ -118,7 +118,7 @@ super + n
 
 super + i
 	bspc desktop -f 9;\
-	chromium
+	brave
 
 super + y 
 	bspc desktop -f 8;\
@@ -134,7 +134,7 @@ super + t
 
 super + u:
 	bspc desktop -f 8;\
-	chromium --new-window https://drive.google.com/drive/u/0/my-drive
+	brave --new-window https://drive.google.com/drive/u/0/my-drive
 
 
 

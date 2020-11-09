@@ -14,5 +14,5 @@ polybar top -r &
 polybar bottom -r &
 polybar base -r &
 
-~/.scripts/mpd_listener &
+# ~/.scripts/mpd_listener &
 ~/.scripts/playerctl_listener &

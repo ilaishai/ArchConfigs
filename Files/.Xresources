@@ -39,8 +39,9 @@ URxvt*termName: rxvt-unicode
 URxvt*perl-lib: /usr/lib/urxvt/perl/
 URxvt.perl-ext: default,matcher
 URxvt.bidi.enabled: true
-URxvt.urlLauncher: firefox
+URxvt.urlLauncher: brave
 URxvt.matcher.button: 1
+URxvt.internalBorder: 15
 
 URxvt*transparent: false
 !URxvt*shading: 30
