@@ -14,12 +14,14 @@ xrdb -merge ~/.Xresources
 killall sxhkd
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 ~/.scripts/bindings/touchpad &
+~/.scripts/bindings/keyboard &
 
 ~/.scripts/fehbg &
 ~/.config/picom/scripts/picomstart
 libinput-gestures-setup start
 
-wmname BSPWM
+# sets the window manager name to allow jetbrains functionality
+wmname LG3D
 
 ##bspwm configuration
 

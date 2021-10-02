@@ -110,30 +110,26 @@ super + d
 
 super + {_,shift+} p 
 	bspc desktop -f 10;\
-	{urxvt -e "ncmpcpp",spotify}
+	{spotify, urxvt -e "ncmpcpp"}
 
-super + n
-	bspc desktop -f 9;\
-	firefox
-
-super + i
-	bspc desktop -f 9;\
+super + {_, shift+} i
+	{bspc desktop -f 9, _};\
 	brave
 
-super + y 
-	bspc desktop -f 8;\
+super + {_, shift+} y 
+	{bspc desktop -f 8, _};\
 	google-calendar
 
-super + o 
-	bspc desktop -f 8;\
+super + {_, shift+} o 
+	{bspc desktop -f 8, _};\
 	google-keep
 
-super + t 
-	bspc desktop -f 8;\
+super + {_, shift+} t 
+	{bspc desktop -f 8, _};\
 	urxvt -e "ranger"
 
-super + u:
-	bspc desktop -f 8;\
+super + {_, shift+} u:
+	{bspc desktop -f 8, _};\
 	brave --new-window https://drive.google.com/drive/u/0/my-drive
 
 

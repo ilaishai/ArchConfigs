@@ -77,9 +77,9 @@ font-5 = fixed:pixelsize=28;1
 font-6 = "Font Awesome 5 Brands:pixelsize=23;1"
 font-7 = "Font Awesome 5 Free:style=Solid:pixelsize=23;1"
 
-modules-left = bspwm cpu memory temperature battery
+modules-left = bspwm cpu memory battery
 modules-center = playerctl
-modules-right = backlight pulseaudio bluetooth xkeyboard wlan date
+modules-right = pulseaudio bluetooth xkeyboard wlan date
 
 tray-position = right
 tray-padding = 2
@@ -112,8 +112,9 @@ format-prefix-foreground = ${colors.foreground-alt}
 ;format-prefix-underline = ${colors.secondary}
 
 
-label-layout = %name%
+;label-layout = %name%
 ;label-layout-underline = ${colors.secondary}
+label-layout = %{A1:exec urxvt -e htop -s PERCENT_CPU:}%name%%{A}
 
 label-indicator-padding = 10
 label-indicator-margin = 1
@@ -134,7 +135,6 @@ label-indicator-background = ${colors.secondary}
 
 [module/bspwm]
 type = internal/bspwm
-
 ws-icon-0 = 1;1
 ws-icon-1 = 2;2
 ws-icon-2 = 3;3
